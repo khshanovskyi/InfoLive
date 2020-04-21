@@ -1,0 +1,221 @@
+.updated-info{
+    text-align: center;
+    width: 100%;
+    background-color: #a6ffad;
+}
+
+#content{
+    width: 90%;
+    margin: 1% 5%;
+    height: 1000px;
+    border: #131313 1px solid;
+}
+
+#block-with-media{
+    float: left;
+    width: 50%;
+    display: block;
+    height: 100%;
+    border-right: #131313 1px solid;
+}
+
+#img-block{
+    margin: 1% 1%;
+    width: 98%;
+    height: 70%;
+}
+
+#img-logo{
+    width: 100%;
+    height: 100%;
+}
+
+#media-name-block{
+    overflow: hidden;
+    width: 100%;
+    height: 4%;
+    border-bottom: #131313 1px solid;
+}
+
+#media-name-block:hover{
+    overflow: auto;
+}
+
+#name-of-media{
+    font-style: italic;
+    font-family: Georgia, serif;
+    font-size: larger;
+}
+
+#topics-block{
+     width: 100%;
+     height: 4%;
+     border-bottom: #131313 1px solid;
+     overflow: hidden;
+}
+
+#topics-block:hover{
+    overflow: auto;
+}
+
+#description-block{
+    width: 100%;
+    height: 12%;
+    border-bottom: #131313 1px solid;
+    overflow: hidden;
+}
+
+#description-block:hover{
+    overflow: auto;
+}
+
+#quantity-block{
+    width: 100%;
+    height: 3%;
+    border-bottom: #131313 1px solid;
+}
+
+#price-block-info{
+    width: 100%;
+    height: 3%;
+    border-bottom: #131313 1px solid;
+}
+
+#subscribers-quantity-block{
+    width: 100%;
+    height: 3%;
+}
+
+#update-block{
+    float: right;
+    width: 50%;
+    display: block;
+    height: 100%;
+}
+
+#update-name-block{
+    text-align: center;
+    overflow: hidden;
+    padding: 2%;
+    width: 100%;
+    height: 7%;
+    border-bottom: #131313 1px solid;
+}
+
+#update-name-block:hover{
+    overflow: auto;
+}
+
+#description-img-pdf-block{
+    overflow: hidden;
+    padding: 2% 2%;
+    width: 100%;
+    height: 50%;
+    border-bottom: #131313 1px solid;
+}
+
+.updateFilesBlock{
+    width: 100%;
+    height: 50%;
+}
+
+.forFile{
+    float: left;
+    width: 50%;
+    height: 100%;
+    border-right: #131313 1px solid;
+}
+
+.forFilesInSystem{
+    float: right;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.forFilesInSystem:hover{
+    overflow: auto;
+}
+
+#description-img-pdf-block:hover{
+    overflow: auto;
+}
+
+#textarea{
+    width: 100%;
+}
+
+#update-topic-and-price-block{
+    width: 100%;
+    height: 43%;
+    float: bottom;
+    margin: 0;
+}
+
+#topic-block{
+    margin: 0;
+    overflow: hidden;
+    padding-left: 5%;
+    width: 50%;
+    height: 100%;
+    float: left;
+    border-right: #131313 1px solid;
+}
+
+#topic-block:hover{
+    overflow: auto;
+}
+
+#price-and-subscribers-block-update{
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    float: right;
+    overflow: hidden;
+}
+
+#price-and-subscribers-block-update:hover{
+    overflow: auto;
+}
+
+#price-block{
+    width: 100%;
+    height: 33%;
+    float: top;
+    border-bottom: #131313 1px solid;
+}
+
+#publications-block{
+    width: 100%;
+    height: 33%;
+    float: bottom;
+    border-bottom: #131313 1px solid;
+}
+
+#subscribers-block{
+    width: 100%;
+    height: 34%;
+    float: bottom;
+}
+
+.newMediaPrice{
+width: 90%;
+}
+
+.btn_submit_update{
+    width: 100px;
+    margin: 10px;
+    border: #131313 1px solid;
+    background-color: #eacd5d;
+    color: #131313;
+    font-weight: 700;
+}
+
+.btn_submit_update:hover{
+    width: 120px;
+    border: #036f02 1px solid;
+    background-color: #036f02;
+    color: #ffffff;
+    transition: border 0.3s, background-color 0.4s, color 0.4s, width 0.3s;
+}
+

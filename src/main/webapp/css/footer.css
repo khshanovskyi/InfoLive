@@ -1,0 +1,38 @@
+footer{
+    display: inline;
+    left: 0;
+    bottom: 0;
+}
+
+#forLocale{
+    display: inline-block;
+    width: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 45%;
+    margin-right: 45%;
+    height: 30px;
+}
+
+.forLocaleBtn{
+    text-align: center;
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+}
+
+#localeBtnEN, #localeBtnRU, #localeBtnUK{
+    text-align: center;
+    background-color: #ffffff;
+    border:0;
+    width: 100%;
+    height: 100%;
+}
+
+#localeBtnEN:hover, #localeBtnRU:hover, #localeBtnUK:hover{
+    background-color: #131313;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s, color 0.3s;
+}

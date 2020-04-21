@@ -1,0 +1,41 @@
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    padding-top: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: center;
+}
+
+#info{
+    background-color: #ffe5de;
+    width: 100%;
+}
+
+#personal-user-info{
+    width: 100%;
+    border: #131313 1px solid;
+}
+
+#name-of-topic{
+    width: 50%;
+    float: left;
+}
+
+#personal-info{
+    width: 50%;
+    float: right;
+}
+
+.info-header-info{
+     text-align: left;
+     border-bottom: #131313 1px solid;
+ }
+
+.info-header-info:hover{
+    border-bottom: #eacd5d 1px solid;
+}

@@ -1,0 +1,160 @@
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-create-media{
+    text-align: center;
+}
+
+#createNewMedia{
+    border: #131313 1px solid;
+    height: 910px;
+}
+
+#rightPart{
+    padding-left: 20px;
+    height: 96%;
+    width: 20%;
+    float: right;
+    border-bottom: #131313 1px solid;
+}
+
+.input-create-media{
+    width: 95%;
+}
+
+
+.block-topic{
+    display: block;
+    width: 95%;
+}
+
+#centralPart{
+    padding-left: 20px;
+    overflow: hidden;
+    width: 40%;
+    height: 96%;
+    float: left;
+    border-right: #131313 1px solid;
+    border-bottom: #131313 1px solid;
+}
+
+#centralPart:hover{
+    overflow: auto;
+}
+
+#leftPart{
+    padding-left: 20px;
+    height: 96%;
+    width: 40%;
+    float: left;
+    border-right: #131313 1px solid;
+    border-bottom: #131313 1px solid;
+}
+
+#updateMedia{
+    margin-top: 20px;
+    text-align: center;
+    border: #131313 1px solid;
+}
+
+#deleteMedia{
+    margin-top: 20px;
+    text-align: center;
+    border: #131313 1px solid;
+}
+
+#sbmtBtn{
+    text-align: center;
+    height: 4%;
+    width: 100%;
+}
+
+.btn_submit{
+    border: #131313 1px solid;
+    color: #131313;
+    background-color: #eacd5d;
+    width: 120px;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+.btn_submit:hover{
+    border: #036f02 1px solid;
+    color: #ffffff;
+    background-color: #036f02;
+    width: 130px;
+    transition: border 0.4s, color 0.4s, background-color 0.4s, width 0.3s;
+}
+
+#all-bootstrap-btn{
+    width: 90%;
+    margin: 1% 5%;
+}
+
+.btn-with-my-style{
+    width: 50%;
+    margin: 1% 25%;
+    border: #131313 1px solid;
+    font-size: larger;
+    font-weight: 700;
+    background-color: #eacd5d;
+}
+
+.btn-with-my-style:hover{
+    border: #036f02 1px solid;
+    background-color: #036f02;
+    color: white;
+}
+
+.first-btn-my-style{
+    margin: 1% 25% 0 25%;
+}
+
+#blockUnblockUser{
+    width: 100%;
+    margin-top: 20px;
+    border: #131313 1px solid;
+}
+
+#block-user{
+    text-align: center;
+    width: 50%;
+    float: left;
+    border-right: #131313 1px solid;
+}
+
+#unblock-user{
+    text-align: center;
+    width: 50%;
+    float: right;
+}
+
+.input-email-for-lock-unlock{
+    width: 80%;
+    margin: 1% 10%;
+}
+
+#btn-block, #btn-unblock{
+    width: 40%;
+    border: #131313 1px solid;
+    background-color: #eacd5d;
+    font-size: larger;
+    font-weight: 700;
+}
+
+#btn-block:hover{
+    border: #ff0021 1px solid;
+    background-color: #ff0021;
+    color: white;
+    transition: color 0.4s, border 0.4s, background-color 0.4s ;
+}
+
+#btn-unblock:hover{
+    border: #036f02 1px solid;
+    background-color: #036f02;
+    color: white;
+    transition: color 0.4s, border 0.4s, background-color 0.4s ;
+}

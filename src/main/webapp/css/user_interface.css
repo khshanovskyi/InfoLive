@@ -1,0 +1,142 @@
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+#content1{
+    width: 96%;
+    margin-right: 2%;
+    margin-left: 2%;
+    text-align: center;
+    margin-top: 1%;
+    display: block;
+    border: 1px #131313 solid;
+}
+
+#user-all-info{
+    float: left;
+    width: 50%;
+    border-right: 1px #131313 solid;
+}
+
+#about-me{
+    border-bottom: 1px #131313 solid;
+}
+
+.topic{
+    text-align: left;
+    padding-left: 5px;
+    float: left;
+    width: 37%;
+}
+
+.actual-info{
+    text-align: left;
+    float: right;
+    width: 63%;
+}
+
+#money-and-subscribing-href{
+    float: right;
+    width: 50%;
+}
+
+#money-and-subscribing-header{
+    border-bottom: 1px #131313 solid;
+}
+
+#withPayHref{
+    width: 100%;
+    height: 150px;
+}
+
+.userPayImg{
+    width: 150px;
+    height: 100%;
+}
+
+#my-subscribing-href{
+    border-top: 1px #131313 solid;
+}
+
+#content{
+    text-align: center;
+    margin-top: 1%;
+    display: block;
+    width: 40%;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+
+ #href-to-orders-info{
+     margin: 3%;
+     font-size: x-large;
+ }
+
+.with-setting{
+    width: 100%;
+    border: 1px #131313 solid;
+}
+
+ .dropdown-with-settings{
+     display: flex;
+     flex-direction: column;
+     width: 94%;
+     margin: 2% 3% 1% 3%;
+     border-bottom: 2px #131313 solid;
+     border-right: 2px #ffffff solid;
+     border-top: 2px #ffffff solid;
+     border-left: 2px #ffffff solid;
+ }
+
+.dropdown-with-settings:hover{
+    border: 2px #eacd5d solid;
+    transition: border 0.5s;
+}
+
+ .form-for-change-data{
+     display: flex;
+     flex-direction: column;
+ }
+
+ .href-with-info-for-changing{
+     font-weight: bolder;
+ }
+
+ .inputField{
+     text-align: center;
+     width: 70%;
+     margin: 1% 15% 0 15%;
+ }
+
+ .submit-in-interface{
+     width: 40%;
+     margin: 1% 30% 0 30%;
+     border: 2px #131313 solid;
+     background-color: white;
+     color: #131313;
+     font-weight: bolder;
+ }
+
+.submit-in-interface:hover{
+    border: 2px #036f02 solid;
+    background-color: #036f02;
+    color: #ffffff;
+}
+
+#logout-div{
+    margin-top: 2%;
+}
+
+.logoutBtn{
+    font-weight: bolder;
+    border: 2px #131313 solid;
+    background-color: #ffffff;
+    color: #131313;
+}
+
+.logoutBtn:hover{
+    border: 2px #eacd5d solid;
+    background-color: #eacd5d;
+}

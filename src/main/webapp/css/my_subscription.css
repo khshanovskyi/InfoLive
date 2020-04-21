@@ -1,0 +1,36 @@
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    text-align: center;
+}
+
+.name-header{
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+.list-subscribing-info{
+    border: #131313 1px solid;
+    border-bottom: white 1px solid;
+    width: 60%;
+    margin: 0 20% 2% 20%;
+}
+
+.content{
+    text-align: left;
+    width: 100%;
+    border-bottom: #131313 1px solid;
+}
+
+.left-part{
+    float: left;
+    width: 50%;
+}
+
+#dont-have-activity-subscriptions{
+    margin: 20% 10%;
+}

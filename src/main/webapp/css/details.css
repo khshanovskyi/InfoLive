@@ -1,0 +1,158 @@
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    padding: 2%;
+}
+
+#picture-block{
+    float: left;
+    width: 50%;
+    height: 900px;
+}
+
+#media-logo-img {
+    width: 100%;
+    height: 100%;
+    float: right;
+}
+
+#subscription-and-info{
+    padding: 3%;
+    float: right;
+    width: 50%;
+    height: 900px;
+    overflow: hidden;
+}
+
+#subscription-and-info:hover{
+    overflow: auto;
+}
+
+#with-name{
+    width: 100%;
+    text-align: center;
+}
+
+#name-of-media-header{
+    font-style: italic;
+    border-bottom: #131313 1px solid;
+    font-family: Georgia, serif;
+}
+
+#update-time{
+    width: 100%;
+    text-align: right;
+    border-bottom: #131313 1px solid;
+}
+
+#read{
+    float: bottom;
+    width: 100%;
+    height: 120px;
+}
+
+#with-href-to-pdf-in-img{
+    text-align: right;
+    float: left;
+    width: 40%;
+    height: 100%;
+    border-bottom: #131313 1px solid;
+}
+
+#with-href-to-pdf{
+    padding-top: 6%;
+    text-align: left;
+    float: right;
+    width: 60%;
+    height: 100%;
+    border-bottom: #131313 1px solid;
+}
+
+#user-read{
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+#user-read:hover{
+    margin-top: 10px;
+    width: 120px;
+    height: 110px;
+}
+
+.for-margin{
+    margin-top: 15px;
+}
+
+#description{
+
+}
+
+#media-name-in-subscribing{
+    font-style: italic;
+    border-bottom: #131313 1px solid;
+    font-family: Georgia, serif;
+}
+
+.radio-subscription-period{
+    font-size: larger;
+    border-bottom: white 1px solid;
+    margin-left: 35%;
+}
+
+.radio-subscription-period:hover{
+    border-bottom: #131313 1px solid;
+}
+
+#subscription-btn{
+    margin-left: 42%;
+    background-color: #eacd5d;
+    border: #131313 1px solid;
+}
+
+#subscription-btn:hover{
+    background-color: #036f02;
+    border: #036f02 1px solid;
+    color: white;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#updateMedia{
+    margin-top: 20px;
+    text-align: center;
+    border: #131313 1px solid;
+}
+
+#deleteMedia{
+    margin-top: 20px;
+    text-align: center;
+    border: #131313 1px solid;
+}
+
+
+.btn_submit{
+    border: #131313 1px solid;
+    color: #131313;
+    background-color: #eacd5d;
+    width: 120px;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+.btn_submit:hover{
+    border: #036f02 1px solid;
+    color: #ffffff;
+    background-color: #036f02;
+    width: 130px;
+    transition: border 0.4s, color 0.4s, background-color 0.4s, width 0.3s;
+}
+
+.media-name-bold{
+    font-style: italic;
+    border-bottom: #131313 1px solid;
+    font-family: Georgia, serif;
+}

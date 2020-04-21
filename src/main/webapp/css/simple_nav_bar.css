@@ -1,0 +1,112 @@
+nav{
+    border-bottom: 1px #eacd5d solid;
+    background-color: #ffffff  ;
+    color: #ffffff;
+    width: 100%;
+    height: 60px;
+}
+
+.navbarMenu{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+.leftPartNavbar{
+    background-color: #131313  ;
+    float: left;
+    height: 100%;
+    width: 60%;
+}
+
+.brandNameField{
+    text-align: center;
+    padding-left: 20px;
+    height: 100%;
+    width: 33%;
+    float: left;
+}
+
+#infoLifeLabel{
+    /*color: #ffffff;*/
+    padding: 3px;
+    font-size: xx-large;
+    border:3px #131313 solid;
+    font-style: italic;
+    font-family: Georgia, serif;
+    color: #ffffff;
+}
+
+#infoLifeLabel:hover{
+    border-bottom: 3px #eacd5d solid;
+    border-top: 3px #eacd5d solid;
+    border-left: 3px #eacd5d solid;
+    border-right:  #eacd5d solid;
+    transition: border-bottom 0.4s, border-left 0.8s, border-top 1.5s, border-right 0.8s, cubic-bezier(.58,.3,.36,1.54) 1s;
+}
+
+.LookingForMenu{
+    padding-top: 15px;
+    height: 100%;
+    width: 67%;
+    float: right;
+}
+
+.centerLeftPartTriangle{
+    float: left;
+    width: 0;
+    height: 0;
+    border-top: 60px solid #131313  ;
+    border-right: 60px solid #eacd5d;
+}
+
+.centerPartNavbar{
+    float: left;
+    background-color: #eacd5d ;
+    height: 100%;
+    width: 10%;
+}
+
+.centerRightPartTriangle{
+    float: left;
+    width: 0;
+    height: 0;
+    border-top: 60px solid #eacd5d;
+    border-right: 60px solid transparent;
+}
+
+.rightPartNavbar{
+    float: left;
+    background-color: #ffffff  ;
+    width: 15%;
+    height: 100%;
+    color: black;
+}
+
+#userLogin{
+    text-align: right;
+    width: 70%;
+    height: 100%;
+    float: right;
+}
+
+.userLoginBtn{
+    border: 0;
+    background-color: #ffffff;
+    text-align: right;
+    height: 92%;
+    width: 50%;
+    justify-content: center;
+}
+
+.userLoginImg{
+    margin-top: 3px;
+    height: 90%;
+    width: 70%;
+}
+
+.userLoginImg:hover{
+    height: 95%;
+    width: 75%;
+    transform: rotateY(5deg);
+}

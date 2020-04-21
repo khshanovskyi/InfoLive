@@ -1,0 +1,15 @@
+2020-03-12 21:28 [ INFO]    InitializationListener:    46 - ContextListener initialized!
+2020-03-12 21:29 [TRACE]          LocaleController:    27 - Install English bundle
+2020-03-12 21:29 [TRACE]          LocaleController:    31 - Install russian bundle
+2020-03-12 21:29 [TRACE]          LocaleController:    27 - Install English bundle
+2020-03-12 21:30 [TRACE]          LocaleController:    27 - Install English bundle
+2020-03-12 21:30 [TRACE]          LocaleController:    31 - Install russian bundle
+2020-03-12 21:30 [TRACE]          LocaleController:    35 - Install Ukrainian bundle
+2020-03-12 21:32 [TRACE]          LocaleController:    27 - Install English bundle
+2020-03-12 21:32 [TRACE]          LocaleController:    27 - Install English bundle
+2020-03-12 21:42 [ INFO]    InitializationListener:    46 - ContextListener initialized!
+2020-03-12 21:45 [ INFO]    InitializationListener:    46 - ContextListener initialized!
+2020-03-12 23:46 [ INFO]    InitializationListener:    46 - ContextListener initialized!
+2020-03-12 23:55 [ INFO]    InitializationListener:    46 - ContextListener initialized!
+2020-03-12 23:58 [ INFO]    InitializationListener:    46 - ContextListener initialized!
+2020-03-12 23:58 [TRACE]          LocaleController:    27 - Install English bundle

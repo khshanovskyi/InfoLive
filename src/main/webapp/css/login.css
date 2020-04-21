@@ -1,0 +1,76 @@
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    text-align: center;
+    width: 100%;
+}
+
+#info-from-subscribe{
+    text-align: center;
+    padding: 1%;
+    width: 90%;
+    margin: 0 5%;
+    background-color: #c2ffd1;
+}
+
+#not-correct-data{
+    text-align: center;
+    padding: 1%;
+    width: 90%;
+    margin: 0 5%;
+    background-color: #ffc2c2;
+}
+
+#loginOutsideBorder{
+    justify-content: center;
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    border: 1px #131313 solid ;
+    text-align: center;
+}
+
+#loginOutsideBorder:hover{
+    border: 1px #eacd5d solid ;
+    transition: border 0.3s;
+}
+
+.inputField{
+    text-align: center;
+    width: 60%;
+    border:1px #131313 solid ;
+}
+
+.inputField:hover{
+    border:1px #eacd5d solid ;
+    transition: border 0.3s;
+}
+
+#loginBtn{
+    margin: 2%;
+    border:1px #131313 solid ;
+    background-color: #ffffff;
+    text-align: center;
+    width: 20%;
+    font-weight: 600;
+}
+
+#loginBtn:hover{
+    border:1px #eacd5d solid ;
+    background-color: #eacd5d;
+    width: 25%;
+    font-weight: 700;
+    transition: background-color 0.3s, width 0.3s, font-weight 0.3s;
+}
+
+a{
+    display: block;
+}
+

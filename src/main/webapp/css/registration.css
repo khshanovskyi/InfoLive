@@ -1,0 +1,131 @@
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    text-align: center;
+    width: 100%;
+}
+
+#loginOutsideBorder{
+    justify-content: center;
+    width: 50%;
+    margin-top: 1%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border: 1px #131313 solid ;
+    text-align: center;
+}
+
+#loginOutsideBorder:hover{
+    border: 1px #eacd5d solid ;
+    transition: border 0.3s;
+}
+
+h3{
+    margin-bottom: 15px;
+}
+
+.fieldDiv{
+    margin-bottom: 10px;
+}
+
+.inputField{
+    text-align: center;
+    width: 60%;
+    border:1px #131313 solid ;
+}
+
+.inputField:hover{
+    border:1px #eacd5d solid ;
+    transition: border 0.3s;
+}
+
+#loginBtn{
+    margin: 2%;
+    border:1px #131313 solid ;
+    background-color: #ffffff;
+    text-align: center;
+    width: 30%;
+    font-weight: 600;
+}
+
+#loginBtn:hover{
+    border:1px #eacd5d solid ;
+    background-color: #eacd5d;
+    width: 35%;
+    font-weight: 700;
+    transition: background-color 0.3s, width 0.3s, font-weight 0.3s;
+}
+main{
+    text-align: center;
+    width: 100%;
+}
+
+#loginOutsideBorder{
+    justify-content: center;
+    width: 50%;
+    margin-top: 1%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border: 1px #131313 solid ;
+    text-align: center;
+}
+
+#loginOutsideBorder:hover{
+    border: 1px #eacd5d solid ;
+    transition: border 0.3s;
+}
+
+h3{
+    margin-bottom: 10px;
+}
+
+#requiredField{
+    border-bottom: #131313 1px solid;
+    margin-bottom: 15px;
+}
+
+.fieldDiv{
+    margin-bottom: 10px;
+}
+
+.inputField{
+    text-align: center;
+    width: 60%;
+    border:1px #131313 solid ;
+}
+
+.inputField:hover{
+    border:1px #eacd5d solid ;
+    transition: border 0.3s;
+}
+
+#loginBtn{
+    margin: 2%;
+    border:1px #131313 solid ;
+    background-color: #ffffff;
+    text-align: center;
+    width: 30%;
+    font-weight: 600;
+}
+
+#loginBtn:hover{
+    border:1px #eacd5d solid ;
+    background-color: #eacd5d;
+    width: 35%;
+    font-weight: 700;
+    transition: background-color 0.3s, width 0.3s, font-weight 0.3s;
+}
+
+a{
+    display: block;
+}
+
+
