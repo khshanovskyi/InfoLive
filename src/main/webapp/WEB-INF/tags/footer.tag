@@ -9,7 +9,7 @@
         </div>
         <div class="forLocaleBtn">
             <form action="locale">
-                <button name="localeBtnRU" id="localeBtnRU" title="Русский" type="submit"}>RU</button>
+                <button name="localeBtnRU" id="localeBtnRU" title="Русский" type="submit">RU</button>
                 <input type="hidden" name="URLFromRequest" value="/media">
             </form>
         </div>

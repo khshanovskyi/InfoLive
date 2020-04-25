@@ -1,6 +1,8 @@
 package ua.nure.khshanovskyi.infoLife.controller.menu.role.admin;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import ua.nure.khshanovskyi.infoLife.service.topLewel.media.IMediaService;
 
 import javax.servlet.ServletException;
@@ -20,7 +22,7 @@ import java.io.IOException;
 )
 public class CreateNewMediaController extends HttpServlet {
 
-    private static final Logger LOGGER = Logger.getLogger(CreateNewMediaController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CreateNewMediaController.class);
 
     private static final String pathForImg = "E:/InfoLive/src/main/webapp/logo_imgs/";
     private static final String pathForPdf = "E:/InfoLive/src/main/webapp/reader/";

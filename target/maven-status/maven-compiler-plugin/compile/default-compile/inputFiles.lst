@@ -17,7 +17,6 @@ E:\InfoLive\src\main\java\ua\nure\khshanovskyi\infoLife\filter\FilterFromUserWit
 E:\InfoLive\src\main\java\ua\nure\khshanovskyi\infoLife\service\lowerLevel\user\creator\UserCreator.java
 E:\InfoLive\src\main\java\ua\nure\khshanovskyi\infoLife\entity\user\User.java
 E:\InfoLive\src\main\java\ua\nure\khshanovskyi\infoLife\controller\subscription\SubscriptionSuccessController.java
-E:\InfoLive\src\main\java\ua\nure\khshanovskyi\infoLife\tag\CaptchaTag.java
 E:\InfoLive\src\main\java\ua\nure\khshanovskyi\infoLife\handler\DataEnteredHandler.java
 E:\InfoLive\src\main\java\ua\nure\khshanovskyi\infoLife\controller\login\LoginController.java
 E:\InfoLive\src\main\java\ua\nure\khshanovskyi\infoLife\entity\subscription\builder\SubscriptionBuilder.java
@@ -27,7 +26,6 @@ E:\InfoLive\src\main\java\ua\nure\khshanovskyi\infoLife\filter\SubscriptionDTOFi
 E:\InfoLive\src\main\java\ua\nure\khshanovskyi\infoLife\dao\user\IUserDao.java
 E:\InfoLive\src\main\java\ua\nure\khshanovskyi\infoLife\dao\media\impl\MediaDaoMySql.java
 E:\InfoLive\src\main\java\ua\nure\khshanovskyi\infoLife\entity\constant\Constant.java
-E:\InfoLive\src\main\java\ua\nure\khshanovskyi\infoLife\validation\CheckEmail.java
 E:\InfoLive\src\main\java\ua\nure\khshanovskyi\infoLife\service\topLewel\user\impl\UserServiceImpl.java
 E:\InfoLive\src\main\java\ua\nure\khshanovskyi\infoLife\filter\FilterBlockUser.java
 E:\InfoLive\src\main\java\ua\nure\khshanovskyi\infoLife\dao\media\IMediaDao.java

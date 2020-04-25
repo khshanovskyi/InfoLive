@@ -18,6 +18,6 @@
     <title>INFOLIVE:<fmt:message key="read.online"/></title>
 </head>
 <body>
-<embed src="${pageContext.request.contextPath}/reader/${pathToFile}" width="100%" height="100%" />
+<embed src="<c:out value="${pageContext.request.contextPath}"/>/reader/${pathToFile}" width="100%" height="100%"/>
 </body>
 </html>

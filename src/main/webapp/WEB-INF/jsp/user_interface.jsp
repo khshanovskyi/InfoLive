@@ -67,11 +67,11 @@
         <h2 id="money-and-subscribing-header"><fmt:message key="Money.and.subscribing"/>:</h2>
         <h3><fmt:message key="My.money.amount"/>: <b>₴</b> <c:out value="${USER_IS_UNBLOCKED.money}"/></h3>
         <div id="withPayHref">
-            <a class="userBtnPay" href="/InfoLive.ua/payment-service" title="<fmt:message key="add.money.title"/>">
+            <a class="userBtnPay" href="<c:out value="${pageContext.request.contextPath}"/>/payment-service" title="<fmt:message key="add.money.title"/>">
                 <img class="userPayImg"src="icon/currency.png"></a>
         </div>
-        <h3><a href="/InfoLive.ua/payment-service"><fmt:message key="add.money"/></a></h3>
-        <h3 id="my-subscribing-href"><a href="/InfoLive.ua/my-subscriptions" title="<fmt:message key="my.subscribing.details"/>"><fmt:message key="my.subscribing"/> →</a></h3>
+        <h3><a href="<c:out value="${pageContext.request.contextPath}"/>/payment-service"><fmt:message key="add.money"/></a></h3>
+        <h3 id="my-subscribing-href"><a href="<c:out value="${pageContext.request.contextPath}"/>/my-subscriptions" title="<fmt:message key="my.subscribing.details"/>"><fmt:message key="my.subscribing"/> →</a></h3>
     </div>
 </div>
 <%--FIELDS WITH UPDATE SETTINDS--%>
@@ -193,7 +193,7 @@
         </div>
         <div class="forLocaleBtn">
             <form action="locale">
-                <button name="localeBtnRU" id="localeBtnRU" title="Русский" type="submit" }>RU</button>
+                <button name="localeBtnRU" id="localeBtnRU" title="Русский" type="submit">RU</button>
                 <input type="hidden" name="URLFromRequest" value="/user-interface">
             </form>
         </div>

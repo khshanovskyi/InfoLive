@@ -1,21 +1,35 @@
 package ua.nure.khshanovskyi.infoLife.filter;
 
-import org.apache.log4j.Logger;
 import ua.nure.khshanovskyi.infoLife.entity.constant.Constant;
 import ua.nure.khshanovskyi.infoLife.entity.user.User;
 import ua.nure.khshanovskyi.infoLife.service.topLewel.user.IUserService;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import javax.servlet.*;
+import javax.servlet.Filter;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebFilter;
-import javax.servlet.http.*;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Optional;
 
+/**
+ * This filter for restore {@link HttpSession} for {@link User} from {@link Cookie} which we got from {@link User}.
+ *
+ * @author Khshanovskyi Pavlo
+ */
 @WebFilter(urlPatterns = {"/media", "/details", "/reader"})
 public class AuthorizationSessionFilter implements Filter {
 
-    private static final Logger LOGGER = Logger.getLogger(AuthorizationSessionFilter.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AuthorizationSessionFilter.class);
 
     private IUserService userService;
 

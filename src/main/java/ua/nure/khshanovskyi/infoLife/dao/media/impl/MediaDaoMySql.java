@@ -1,32 +1,72 @@
 package ua.nure.khshanovskyi.infoLife.dao.media.impl;
 
-import org.apache.log4j.Logger;
 import ua.nure.khshanovskyi.infoLife.dao.ConnectionManager;
 import ua.nure.khshanovskyi.infoLife.dao.ConstantMySqlRequest;
 import ua.nure.khshanovskyi.infoLife.dao.media.IMediaDao;
 import ua.nure.khshanovskyi.infoLife.entity.media.Media;
 import ua.nure.khshanovskyi.infoLife.entity.media.builder.MediaBuilder;
+import ua.nure.khshanovskyi.infoLife.entity.user.User;
 import ua.nure.khshanovskyi.infoLife.exception.DaoException;
 
-import javax.sql.DataSource;
-import java.sql.*;
-import java.sql.Date;
-import java.util.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.Time;
+import java.sql.SQLException;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.Optional;
+
+/**
+ * Implementation of {@link IMediaDao} interface for work with "media" table in MySQL DB.
+ *
+ * @author Khshanovskyi Pavlo
+ */
 public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
 
-    private static final Logger LOGGER = Logger.getLogger(MediaDaoMySql.class);
+    /**
+     * {@link Logger} log4j for logs.
+     */
+    private static final Logger LOGGER = LoggerFactory.getLogger(MediaDaoMySql.class);
 
+    /**
+     * {@link List} for get {@link Media} objects and after work with these objects.
+     */
     private List<Media> mediaList = new ArrayList<>();
+    /**
+     * {@link Set} for get {@link Media} objects and after work with these objects.
+     */
     private Set<Media> mediaSet = new HashSet<>();
+    /**
+     * {@link Connection}
+     */
     private Connection connection;
+    /**
+     * {@link PreparedStatement}
+     */
     private PreparedStatement statement;
 
+    /**
+     * Constructor for initialization this class and initialization {@link DataSource} for work with DB.
+     *
+     * @param dataSource {@link DataSource}
+     */
     public MediaDaoMySql(DataSource dataSource) {
         super(dataSource);
     }
 
-
+    /**
+     * Method return {@link List} with {@link Media} from DB.
+     *
+     * @return {@link List} {@link Media}
+     */
     @Override
     public List<Media> allMedia() {
         clearList();
@@ -42,6 +82,12 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         return mediaList;
     }
 
+    /**
+     * Method return {@link Media} from DB by this {@link Media} id.
+     *
+     * @param mediaId - id of {@link Media}
+     * @return {@link Media}
+     */
     @Override
     public Optional<Media> getMediaById(int mediaId) {
         ResultSet resultSet = null;
@@ -60,6 +106,11 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         return Optional.empty();
     }
 
+    /**
+     * Method return {@link List} with {@link Media} from DB sorted by subscribers quantity.
+     *
+     * @return {@link List} {@link Media}
+     */
     @Override
     public List<Media> sortByPopular() {
         clearList();
@@ -75,6 +126,12 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         return mediaList;
     }
 
+    /**
+     * Method return {@link Set} with {@link Media} from DB sorted by topic names transferable from parameter.
+     *
+     * @param topicName - topic names
+     * @return {@link Set} {@link Media}
+     */
     @Override
     public Set<Media> sortByTopic(String topicName) {
         clearList();
@@ -95,6 +152,11 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         return mediaSet;
     }
 
+    /**
+     * Method return {@link List} with {@link Media} from DB sorted by name.
+     *
+     * @return {@link List} {@link Media}
+     */
     @Override
     public List<Media> sortByName() {
         clearList();
@@ -110,6 +172,11 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         return mediaList;
     }
 
+    /**
+     * Method return {@link List} with {@link Media} from DB sorted by price where 9 > 10 (like firstly cheap).
+     *
+     * @return {@link List} {@link Media}
+     */
     @Override
     public List<Media> sortByPriceAsc() {
         clearList();
@@ -125,6 +192,11 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         return mediaList;
     }
 
+    /**
+     * Method return {@link List} with {@link Media} from DB sorted by price where 10 > 9 (like firstly expensive).
+     *
+     * @return {@link List} {@link Media}
+     */
     @Override
     public List<Media> sortByPriceDesc() {
         clearList();
@@ -140,6 +212,12 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         return mediaList;
     }
 
+    /**
+     * Method for searching {@link Media} by Media name.
+     *
+     * @param request - request from {@link User} after search field
+     * @return {@link List} {@link Media}
+     */
     @Override
     public List<Media> searchFromSearchField(String request) {
         clearList();
@@ -159,6 +237,12 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         return mediaList;
     }
 
+    /**
+     * Method for update {@link Media} field "subscribers".
+     *
+     * @param subscribers - new subscribers quantity
+     * @param mediaId     - id of {@link Media}
+     */
     @Override
     public void updateSubscribersQuantity(int subscribers, int mediaId) {
         try {
@@ -180,6 +264,11 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         }
     }
 
+    /**
+     * Method for INSERT new {@link Media} in DB.
+     *
+     * @param media - {@link Media} object generated in java layer
+     */
     @Override
     public void createNewMedia(Media media) {
         try {
@@ -209,6 +298,11 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         }
     }
 
+    /**
+     * Get all "uriLogoImg" form DB in {@link List} {@link String}.
+     *
+     * @return {@link List} {@link String} with names of {@link Media} "uriLogoImg" field.
+     */
     @Override
     public List<String> getAllNamesOfImgLogo() {
         List<String> listImgLogo = new ArrayList<>();
@@ -224,6 +318,11 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         return listImgLogo;
     }
 
+    /**
+     * Get all "pdfUri" form DB in {@link List} {@link String}
+     *
+     * @return {@link List} {@link String} with names of {@link Media} "pdfUri" field.
+     */
     @Override
     public List<String> getAllNamesOfPdf() {
         List<String> listPdfUri = new ArrayList<>();
@@ -239,6 +338,12 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         return listPdfUri;
     }
 
+    /**
+     * Method for update {@link Media} field "mediaName".
+     *
+     * @param mediaName - new {@link Media} name
+     * @param mediaId   - id of {@link Media}
+     */
     @Override
     public void updateMediaName(String mediaName, int mediaId) {
         try {
@@ -260,6 +365,12 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         }
     }
 
+    /**
+     * Method for update {@link Media} field "description".
+     *
+     * @param description - new {@link Media} description
+     * @param mediaId     - id of {@link Media}
+     */
     @Override
     public void updateMediaDescription(String description, int mediaId) {
         try {
@@ -281,6 +392,12 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         }
     }
 
+    /**
+     * Method for update {@link Media} field "imgLogoUri".
+     *
+     * @param imgLogoUri - new imgLogoUri (name of {@link Media} logotype picture)
+     * @param mediaId    - id of {@link Media}
+     */
     @Override
     public void updateMediaImageLogoUri(String imgLogoUri, int mediaId) {
         try {
@@ -302,6 +419,12 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         }
     }
 
+    /**
+     * Method for update {@link Media} field "pdfUri".
+     *
+     * @param pdfUri  - new pdfUri (name of PDF file)
+     * @param mediaId - id of {@link Media}
+     */
     @Override
     public void updateMediaPdfUri(String pdfUri, int mediaId) {
         try {
@@ -323,6 +446,12 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         }
     }
 
+    /**
+     * Method for update {@link Media} field "topic".
+     *
+     * @param topic   -  new topic of {@link Media}
+     * @param mediaId - id of {@link Media}
+     */
     @Override
     public void updateMediaTopic(String topic, int mediaId) {
         try {
@@ -344,6 +473,12 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         }
     }
 
+    /**
+     * Method for update {@link Media} field "price".
+     *
+     * @param price   - new {@link Media} price
+     * @param mediaId - id of {@link Media}
+     */
     @Override
     public void updateMediaPrice(int price, int mediaId) {
         try {
@@ -365,6 +500,12 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         }
     }
 
+    /**
+     * Method for update {@link Media} field "publicationsQuantity".
+     *
+     * @param publicationsQuantity - new quantity publications in month of {@link Media}
+     * @param mediaId              - id of {@link Media}
+     */
     @Override
     public void updateMediaPublicationsQuantity(int publicationsQuantity, int mediaId) {
         try {
@@ -387,6 +528,13 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         }
     }
 
+    /**
+     * Method for update {@link Media} field "date" and "time".
+     *
+     * @param date    - {@link Media} update {@link Date}
+     * @param time    - {@link Media} update {@link Time}
+     * @param mediaId - id of {@link Media}
+     */
     @Override
     public void updateMediaUpdateDateAndTime(Date date, Time time, int mediaId) {
         try {
@@ -409,6 +557,11 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         }
     }
 
+    /**
+     * Delete from DB {@link Media} object by mediaId.
+     *
+     * @param mediaId - id of {@link Media}
+     */
     @Override
     public void deleteMediaById(int mediaId) {
         try {
@@ -418,7 +571,7 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
             statement.setInt(1, mediaId);
             statement.execute();
             connection.commit();
-            LOGGER.trace("DELETE media " + mediaId +" success.");
+            LOGGER.trace("DELETE media " + mediaId + " success.");
         } catch (SQLException e) {
             rollback(connection);
             LOGGER.error("Problem with DELETING media: " + mediaId);
@@ -429,6 +582,36 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         }
     }
 
+    /**
+     * Method for testing MediaDAO
+     *
+     * @return {@link Media}
+     */
+    @Override
+    public Optional<Media> getLastCreatedMedia() {
+        ResultSet resultSet = null;
+        try (Connection connection = getConnection();
+             PreparedStatement statement = connection.prepareStatement(ConstantMySqlRequest.GET_LAST_MEDIA_OBJECT)) {
+            resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                return Optional.of(extractMedia(resultSet));
+            }
+        } catch (SQLException e) {
+            LOGGER.error("Could not get last media object" + e);
+        } finally {
+            close(resultSet);
+        }
+        return Optional.empty();
+    }
+
+    /**
+     * Method extract Media parameters from DB and generated new {@link Media} object for work with this is object in
+     * java and view layers.
+     *
+     * @param resultSet - {@link ResultSet}
+     * @return generated {@link Media} object. This object is generation by {@link MediaBuilder}
+     * @throws SQLException - {@link SQLException}
+     */
     private Media extractMedia(ResultSet resultSet) throws SQLException {
         MediaBuilder mediaBuilder = new MediaBuilder();
 
@@ -447,12 +630,18 @@ public class MediaDaoMySql extends ConnectionManager implements IMediaDao {
         return mediaBuilder.build();
     }
 
+    /**
+     * Method for clear mediaList if that not empty.
+     */
     private void clearList() {
         if (!mediaList.isEmpty()) {
             mediaList.clear();
         }
     }
 
+    /**
+     * Method for clear mediaSet if that not empty.
+     */
     private void clearSet() {
         if (!mediaSet.isEmpty()) {
             mediaSet.clear();

@@ -2,6 +2,11 @@ package ua.nure.khshanovskyi.infoLife.entity.user;
 
 import java.util.Objects;
 
+/**
+ * Entity for creating User (Users) in DB and project
+ *
+ * @author Khshanovskyi Pavlo
+ */
 public class User {
 
     private int userId;

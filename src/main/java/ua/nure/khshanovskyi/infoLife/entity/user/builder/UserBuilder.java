@@ -2,6 +2,11 @@ package ua.nure.khshanovskyi.infoLife.entity.user.builder;
 
 import ua.nure.khshanovskyi.infoLife.entity.user.User;
 
+/**
+ * Builder for {@link User} entity.
+ *
+ * @author Khshanovskyi Pavlo
+ */
 public class UserBuilder {
 
     private int userId;
@@ -106,7 +111,12 @@ public class UserBuilder {
         return this;
     }
 
-    public User build(){
+    /**
+     * Method build {@link User} object.
+     *
+     * @return new {@link User} entity object
+     */
+    public User build() {
         User user = new User();
 
         user.setUserId(userId);

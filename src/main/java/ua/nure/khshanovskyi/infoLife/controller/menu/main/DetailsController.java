@@ -1,6 +1,8 @@
 package ua.nure.khshanovskyi.infoLife.controller.menu.main;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import ua.nure.khshanovskyi.infoLife.entity.constant.Constant;
 import ua.nure.khshanovskyi.infoLife.entity.media.Media;
 import ua.nure.khshanovskyi.infoLife.entity.user.User;
@@ -18,7 +20,7 @@ import java.io.IOException;
 @WebServlet("/details")
 public class DetailsController extends HttpServlet {
 
-    private static final Logger LOGGER = Logger.getLogger(DetailsController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DetailsController.class);
 
     private IMediaService mediaService;
     private ISubscriptionService subscriptionService;

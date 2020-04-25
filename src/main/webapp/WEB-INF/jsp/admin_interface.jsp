@@ -170,32 +170,6 @@
                 </div>
             </form>
         </div>
-
-<%--        <div id="update-media">--%>
-<%--            <div id="updateMedia">--%>
-<%--                <form action="update-media">--%>
-<%--                    <h3 class="header-create-media"><b><fmt:message key="update.media.name"/>↓</b></h3>--%>
-<%--                    <h5><fmt:message key="You.must.enter.media.ID.to.update.the.media"/>!</h5>--%>
-<%--                    <input type="number" placeholder="<fmt:message key="input.id.of.media"/>" name="update_media_id"  min="1" max="100000" required>--%>
-<%--                    <br>--%>
-<%--                    <button type="submit" name="btn_to_update" class="btn_submit"><fmt:message key="UPDATE"/></button>--%>
-<%--                </form>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-
-<%--        <div id="delete-media">--%>
-<%--            <div  id="deleteMedia">--%>
-<%--                <div class="card card-body">--%>
-<%--                    <form action="delete-media" method="post">--%>
-<%--                        <h3 class="header-create-media"><b><fmt:message key="delete.media.name"/>↓</b></h3>--%>
-<%--                        <h5><fmt:message key="You.must.enter.media.ID.to.delete.the.media"/>!</h5>--%>
-<%--                        <input type="number" placeholder="<fmt:message key="input.id.of.media"/>" name="deleteMediaID" min="1" max="100000" required>--%>
-<%--                        <br><button type="submit" name="deleteMediaBtn" class="btn_submit"><fmt:message key="DELETE"/></button>--%>
-<%--                    </form>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-
         <div id="block-unblock-user">
             <div id="blockUnblockUser">
                 <div class="card card-body">
@@ -245,7 +219,7 @@
         </div>
         <div class="forLocaleBtn">
             <form action="locale">
-                <button name="localeBtnRU" id="localeBtnRU" title="Русский" type="submit" }>RU</button>
+                <button name="localeBtnRU" id="localeBtnRU" title="Русский" type="submit">RU</button>
                 <input type="hidden" name="URLFromRequest" value="/admin-interface">
             </form>
         </div>

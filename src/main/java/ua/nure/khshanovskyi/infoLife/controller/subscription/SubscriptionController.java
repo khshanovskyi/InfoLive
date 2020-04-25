@@ -1,6 +1,8 @@
 package ua.nure.khshanovskyi.infoLife.controller.subscription;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import ua.nure.khshanovskyi.infoLife.entity.dto.SubscriptionDTO;
 import ua.nure.khshanovskyi.infoLife.entity.constant.Constant;
 import ua.nure.khshanovskyi.infoLife.entity.media.Media;
@@ -19,7 +21,7 @@ import java.io.IOException;
 @WebServlet("/subscribing")
 public class SubscriptionController extends HttpServlet {
 
-    private static final Logger LOGGER = Logger.getLogger(SubscriptionController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(SubscriptionController.class);
 
     private ISubscriptionService subscriptionService;
     private IMediaService mediaService;

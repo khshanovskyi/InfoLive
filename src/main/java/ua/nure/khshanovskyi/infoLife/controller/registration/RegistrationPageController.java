@@ -1,6 +1,8 @@
 package ua.nure.khshanovskyi.infoLife.controller.registration;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import ua.nure.khshanovskyi.infoLife.entity.constant.Constant;
 
 import javax.servlet.ServletException;
@@ -13,7 +15,7 @@ import java.io.IOException;
 @WebServlet("/registration")
 public class RegistrationPageController extends HttpServlet {
 
-    private static final Logger LOGGER = Logger.getLogger(RegistrationPageController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(RegistrationPageController.class);
 
     @Override
     public void init(){
@@ -29,7 +31,7 @@ public class RegistrationPageController extends HttpServlet {
             }
 
         }catch (ServletException | IOException e){
-            LOGGER.error(e);
+            LOGGER.error(String.valueOf(e));
         }
     }
 

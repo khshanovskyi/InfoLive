@@ -1,6 +1,5 @@
 package ua.nure.khshanovskyi.infoLife.controller.menu.role.admin;
 
-import org.apache.log4j.Logger;
 import ua.nure.khshanovskyi.infoLife.entity.constant.Constant;
 import ua.nure.khshanovskyi.infoLife.service.topLewel.media.IMediaService;
 import ua.nure.khshanovskyi.infoLife.service.topLewel.user.IUserService;
@@ -15,8 +14,6 @@ import java.io.IOException;
 @WebServlet("/admin-interface")
 public class AdminInterfaceController extends HttpServlet {
 
-    private static final Logger LOGGER = Logger.getLogger(AdminInterfaceController.class);
-
     private IUserService userService;
     private IMediaService mediaService;
 
@@ -28,9 +25,11 @@ public class AdminInterfaceController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("IMG_LOGO_NAMES", mediaService.getAllImgLogoNames());
-        req.setAttribute("PDF_NAMES", mediaService.getAllPdfNames());
-        req.getRequestDispatcher("WEB-INF/jsp/admin_interface.jsp").forward(req, resp);
+        if (req.getSession().getAttribute(String.valueOf(Constant.USER_IS_UNBLOCKED)) != null ){
+            req.setAttribute("IMG_LOGO_NAMES", mediaService.getAllImgLogoNames());
+            req.setAttribute("PDF_NAMES", mediaService.getAllPdfNames());
+            req.getRequestDispatcher("WEB-INF/jsp/admin_interface.jsp").forward(req, resp);
+        }
     }
 
     @Override

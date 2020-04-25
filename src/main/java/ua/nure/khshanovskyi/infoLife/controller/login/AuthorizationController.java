@@ -1,7 +1,8 @@
 package ua.nure.khshanovskyi.infoLife.controller.login;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import org.apache.log4j.Logger;
 import ua.nure.khshanovskyi.infoLife.entity.user.User;
 import ua.nure.khshanovskyi.infoLife.entity.constant.Constant;
 import ua.nure.khshanovskyi.infoLife.service.topLewel.user.IUserService;
@@ -14,7 +15,7 @@ import java.util.Optional;
 @WebServlet("/authorization")
 public class AuthorizationController extends HttpServlet {
 
-    private static final Logger LOGGER = Logger.getLogger(AuthorizationController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AuthorizationController.class);
 
     private IUserService userService;
 

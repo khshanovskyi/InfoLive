@@ -1,6 +1,8 @@
 package ua.nure.khshanovskyi.infoLife.service.topLewel.user.impl;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import ua.nure.khshanovskyi.infoLife.dao.user.IUserDao;
 import ua.nure.khshanovskyi.infoLife.entity.user.User;
 import ua.nure.khshanovskyi.infoLife.entity.constant.Constant;
@@ -18,7 +20,7 @@ public class UserServiceImpl implements IUserService {
     /**
      * {@link Logger} log4j for logs.
      */
-    private static final Logger LOGGER = Logger.getLogger(UserServiceImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
 
     /**
      * {@link IUserDao} object for work with DB.

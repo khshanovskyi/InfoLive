@@ -6,6 +6,8 @@ import java.util.Objects;
 
 /**
  * Entity of media.
+ *
+ * @author Khshanovskyi Pavlo
  */
 public class Media {
 

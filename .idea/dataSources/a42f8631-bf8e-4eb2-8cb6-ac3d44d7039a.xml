@@ -1245,11 +1245,13 @@
       <ColNames>user_id</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>user_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="306" parent="283" name="media_id_foreign">
       <ColNames>id_media</ColNames>
       <RefTableName>media</RefTableName>
       <RefColNames>id_media</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="307" parent="284" name="user_id">
       <Position>1</Position>

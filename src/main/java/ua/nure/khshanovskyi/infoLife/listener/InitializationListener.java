@@ -1,8 +1,5 @@
 package ua.nure.khshanovskyi.infoLife.listener;
 
-import com.zaxxer.hikari.HikariConfig;
-import com.zaxxer.hikari.HikariDataSource;
-import org.apache.log4j.Logger;
 import ua.nure.khshanovskyi.infoLife.dao.media.IMediaDao;
 import ua.nure.khshanovskyi.infoLife.dao.media.impl.MediaDaoMySql;
 import ua.nure.khshanovskyi.infoLife.dao.subscribe.ISubscriptionDao;
@@ -16,15 +13,25 @@ import ua.nure.khshanovskyi.infoLife.service.topLewel.subscribe.impl.Subscriptio
 import ua.nure.khshanovskyi.infoLife.service.topLewel.user.IUserService;
 import ua.nure.khshanovskyi.infoLife.service.topLewel.user.impl.UserServiceImpl;
 
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
+/**
+ * This class implementation of {@link ServletContextListener}.
+ * This class like centre of this project. Here we do initialization of {@link IUserDao}, {@link IMediaDao},
+ * {@link ISubscriptionDao} and there service.
+ */
 @WebListener
 public class InitializationListener implements ServletContextListener {
 
-    private static final Logger LOGGER = Logger.getLogger(InitializationListener.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(InitializationListener.class);
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {

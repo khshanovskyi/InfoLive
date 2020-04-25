@@ -1,5 +1,8 @@
 package ua.nure.khshanovskyi.infoLife.entity.constant;
 
+/**
+ * Enum with constants.
+ */
 public enum Constant {
     SUBSCRIPTION,
     SUBSCRIPTION_DTO,

@@ -1,7 +1,10 @@
 package ua.nure.khshanovskyi.infoLife.dao;
 
 /**
- * This class contain requests for MEDIA, USER and SUBSCRIPTION tables in DB.
+ * This class contains requests for MEDIA, USER and SUBSCRIPTION tables in DB.
+ * This requests only for MySQL database.
+ *
+ * @author Khshanovskyi Pavlo
  */
 public class ConstantMySqlRequest {
 
@@ -19,7 +22,7 @@ public class ConstantMySqlRequest {
             "(media_name, topic, description, uri_logo_img, pdf_uri, subscribers, price, publication_in_month, update_date, update_time) " +
             "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
     public static final String GET_ALL_IMG_LOGO_NAMES = "SELECT uri_logo_img FROM media;";
-    public static final String GET_ALL_PDF_NAMES = "SELECT uri_logo_img FROM media;";
+    public static final String GET_ALL_PDF_NAMES = "SELECT pdf_uri FROM media;";
     public static final String UPDATE_MEDIA_NAME_BY_ID = "UPDATE media SET media_name = ? WHERE id_media = ?;";
     public static final String UPDATE_DESCRIPTION_BY_ID = "UPDATE media SET description = ? WHERE id_media = ?;";
     public static final String UPDATE_lOGO_IMG_URI_BY_ID = "UPDATE media SET uri_logo_img = ? WHERE id_media = ?;";
@@ -29,9 +32,9 @@ public class ConstantMySqlRequest {
     public static final String UPDATE_DATE_AND_TIME_BY_ID = "UPDATE media SET update_date = ?, update_time = ?  WHERE id_media = ?;";
     public static final String UPDATE_TOPIC_BY_ID = "UPDATE media SET topic = ? WHERE id_media = ?;";
     public static final String DELETE_MEDIA_BY_ID = "DELETE FROM media WHERE id_media = ?;";
+    public static final String GET_LAST_MEDIA_OBJECT = "SELECT * FROM media WHERE id_media = (SELECT MAX(id_media) FROM media);";
 
     // !!!FOR USER!!!
-    public static final String SELECT_ALL_USERS = "SELECT * FROM user;";
     public static final String GET_USER_BY_ID = "SELECT * FROM user WHERE user_id = ?;";
     public static final String GET_USER_BY_EMAIL = "SELECT * FROM user WHERE email = ?;";
     public static final String CREATE_NEW_USER = "INSERT INTO user " +
@@ -54,6 +57,8 @@ public class ConstantMySqlRequest {
     public static final String UPDATE_USER_PASSWORD_BY_ID = "UPDATE user SET password = ? WHERE user_id = ?;";
     public static final String UPDATE_USER_ROLE_BY_ID = "UPDATE user SET role = ? WHERE user_id = ?;";
     public static final String UPDATE_USER_STATE_BY_ID = "UPDATE user SET state = ? WHERE email = ?;";
+    public static final String GET_LAST_USER_OBJECT = "SELECT * FROM user WHERE user_id = (SELECT MAX(user_id) FROM user);";
+    public static final String DELETE_USER_BY_EMAIL = "DELETE FROM user WHERE email = ?;";
 
     // !!!FOR SUBSCRIPTION!!!
     public static final String CREATE_SUBSCRIBE = "INSERT INTO subscription (user_id, id_media, date_from, date_to) " +
@@ -67,4 +72,6 @@ public class ConstantMySqlRequest {
             "and id_subscription=(SELECT MAX(id_subscription) from subscription where user_id = ?);";
     public static final String GET_ACTIVITY_USER_SUBSCRIPTIONS = "SELECT * FROM infolive.subscription " +
             "inner join infolive.media on subscription.id_media = media.id_media  where user_id = ? and date_to > ?;";
+    public static final String GET_LAST_CREATED_SUBSCRIPTION = "SELECT * FROM subscription WHERE id_subscription = " +
+            "(SELECT MAX(id_subscription) FROM subscription);";
 }

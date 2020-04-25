@@ -1,6 +1,7 @@
 package ua.nure.khshanovskyi.infoLife.controller.logout;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ua.nure.khshanovskyi.infoLife.entity.constant.Constant;
 
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +11,7 @@ import java.io.IOException;
 @WebServlet("/logout")
 public class LogoutController extends HttpServlet {
 
-    private static Logger LOGGER = Logger.getLogger(LogoutController.class);
+    private static Logger LOGGER = LoggerFactory.getLogger(LogoutController.class);
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {

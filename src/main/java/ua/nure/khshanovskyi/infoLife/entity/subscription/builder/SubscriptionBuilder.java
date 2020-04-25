@@ -5,6 +5,11 @@ import ua.nure.khshanovskyi.infoLife.entity.subscription.Subscription;
 import java.sql.Date;
 import java.util.Objects;
 
+/**
+ * Builder for {@link Subscription} entity.
+ *
+ * @author Khshanovskyi Pavlo
+ */
 public class SubscriptionBuilder {
 
     private int subscriptionId;
@@ -37,6 +42,11 @@ public class SubscriptionBuilder {
         return this;
     }
 
+    /**
+     * Method build {@link Subscription} object.
+     *
+     * @return new {@link Subscription} entity object
+     */
     public Subscription build(){
         Subscription subscription = new Subscription();
 

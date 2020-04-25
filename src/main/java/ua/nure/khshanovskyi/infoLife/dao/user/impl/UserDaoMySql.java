@@ -1,6 +1,5 @@
 package ua.nure.khshanovskyi.infoLife.dao.user.impl;
 
-import org.apache.log4j.Logger;
 import ua.nure.khshanovskyi.infoLife.dao.ConnectionManager;
 import ua.nure.khshanovskyi.infoLife.dao.ConstantMySqlRequest;
 import ua.nure.khshanovskyi.infoLife.dao.user.IUserDao;
@@ -8,43 +7,53 @@ import ua.nure.khshanovskyi.infoLife.entity.user.User;
 import ua.nure.khshanovskyi.infoLife.entity.user.builder.UserBuilder;
 import ua.nure.khshanovskyi.infoLife.exception.DaoException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
+/**
+ * Implementation of {@link IUserDao} interface for work with "user" table in MySQL DB.
+ *
+ * @author Khshanovskyi Pavlo
+ */
 public class UserDaoMySql extends ConnectionManager implements IUserDao {
 
-    private static final Logger LOGGER = Logger.getLogger(UserDaoMySql.class);
+    /**
+     * {@link Logger} log4j for logs.
+     */
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserDaoMySql.class);
 
+    /**
+     * {@link Connection}
+     */
     private Connection connection = null;
+    /**
+     * {@link PreparedStatement}
+     */
     private PreparedStatement statement = null;
 
+    /**
+     * Constructor for initialization this class and initialization {@link DataSource} for work with DB.
+     *
+     * @param dataSource {@link DataSource}
+     */
     public UserDaoMySql(DataSource dataSource) {
         super(dataSource);
     }
 
-    @Override
-    public List<User> allUsers(){
-        List<User> result = new ArrayList<>();
-        try (Connection connection = getConnection();
-             PreparedStatement statement = connection.prepareStatement(ConstantMySqlRequest.SELECT_ALL_USERS);
-             ResultSet resultSet = statement.executeQuery()) {
-
-            while (resultSet.next()) {
-                result.add(extractUser(resultSet));
-            }
-        } catch (SQLException e) {
-            LOGGER.error("cannot get users from DB");
-            throw new DaoException("cannot get users from DB", e);
-        }
-        return result;
-    }
-
+    /**
+     * Method return {@link Optional#of(Object)} {@link User} if DB contain this "userId" or can return
+     * {@link Optional#empty()} if DB does not contain this "userId"
+     *
+     * @param userId - id of {@link User}
+     * @return {@link Optional#of(Object)} or {@link Optional#empty()}
+     */
     @Override
     public Optional<User> getUserById(int userId) {
         ResultSet resultSet = null;
@@ -64,6 +73,13 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         return Optional.empty();
     }
 
+    /**
+     * Method return {@link Optional#of(Object)} {@link User} if DB contain this "email" or can return
+     * {@link Optional#empty()} if DB does not contain this "email"
+     *
+     * @param email - {@link User} email
+     * @return {@link Optional#of(Object)} or {@link Optional#empty()}
+     */
     @Override
     public Optional<User> getUserByEmail(String email) {
         ResultSet resultSet = null;
@@ -82,6 +98,11 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         return Optional.empty();
     }
 
+    /**
+     * Method INSERT into DB (in "user" table) new {@link User} object which wos generated in java layer.
+     *
+     * @param user - {@link User} object
+     */
     @Override
     public void create(User user) {
         try {
@@ -117,6 +138,12 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Update {@link User} "email" field by "userId".
+     *
+     * @param userId   - id of {@link User}
+     * @param newEmail - new {@link User} email
+     */
     @Override
     public void updateUserEmail(int userId, String newEmail) {
         try {
@@ -138,6 +165,12 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Update {@link User} "surname" field by "userId".
+     *
+     * @param userId     - id of {@link User}
+     * @param newSurname - new {@link User} surname
+     */
     @Override
     public void updateUserSurname(int userId, String newSurname) {
         try {
@@ -160,6 +193,12 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Update {@link User} "name" field by "userId".
+     *
+     * @param userId  - id of {@link User}
+     * @param newName - new {@link User} surname
+     */
     @Override
     public void updateUserName(int userId, String newName) {
         try {
@@ -182,6 +221,12 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Update {@link User} "patronymic" field by "userId".
+     *
+     * @param userId        - id of {@link User}
+     * @param newPatronymic - new {@link User} patronymic
+     */
     @Override
     public void updateUserPatronymic(int userId, String newPatronymic) {
         try {
@@ -204,6 +249,12 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Update {@link User} "phoneNumber" field by "userId".
+     *
+     * @param userId         - id of {@link User}
+     * @param newPhoneNumber - new {@link User} phoneNumber
+     */
     @Override
     public void updateUserPhoneNumber(int userId, int newPhoneNumber) {
         try {
@@ -226,6 +277,12 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Update {@link User} "region" field by "userId".
+     *
+     * @param userId    - id of {@link User}
+     * @param newRegion - new {@link User} region
+     */
     @Override
     public void updateUserRegion(int userId, String newRegion) {
         try {
@@ -248,6 +305,12 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Update {@link User} "region" field by "userId".
+     *
+     * @param userId      - id of {@link User}
+     * @param newDistrict - new {@link User} region
+     */
     @Override
     public void updateUserDistrict(int userId, String newDistrict) {
         try {
@@ -270,6 +333,12 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Update {@link User} "locality" field by "userId".
+     *
+     * @param userId      - id of {@link User}
+     * @param newLocality - new {@link User} locality
+     */
     @Override
     public void updateUserLocality(int userId, String newLocality) {
         try {
@@ -292,6 +361,12 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Update {@link User} "street" field by "userId".
+     *
+     * @param userId    - id of {@link User}
+     * @param newStreet - new {@link User} street
+     */
     @Override
     public void updateUserStreet(int userId, String newStreet) {
         try {
@@ -314,6 +389,12 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Update {@link User} "house" field by "userId".
+     *
+     * @param userId   - id of {@link User}
+     * @param newHouse - new {@link User} house
+     */
     @Override
     public void updateUserHouse(int userId, String newHouse) {
         try {
@@ -336,6 +417,12 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Update {@link User} "flat" field by "userId".
+     *
+     * @param userId  - id of {@link User}
+     * @param newFlat - new {@link User} flat
+     */
     @Override
     public void updateUserFlat(int userId, int newFlat) {
         try {
@@ -358,6 +445,12 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Update {@link User} "postcode" field by "userId".
+     *
+     * @param userId      - id of {@link User}
+     * @param newPostcode - new {@link User} postcode
+     */
     @Override
     public void updateUserPostcode(int userId, int newPostcode) {
         try {
@@ -380,6 +473,12 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Update {@link User} "money" field by "userId".
+     *
+     * @param userId   - id of {@link User}
+     * @param newMoney - new {@link User} money
+     */
     @Override
     public void updateUserMoney(int userId, int newMoney) {
         try {
@@ -402,6 +501,12 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Update {@link User} "password" field by "userId".
+     *
+     * @param userId   - id of {@link User}
+     * @param password - new {@link User} password
+     */
     @Override
     public void updateUserPassword(int userId, String password) {
         try {
@@ -424,6 +529,12 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Update {@link User} "role" field by "userId".
+     *
+     * @param userId - id of {@link User}
+     * @param role   - new {@link User} role
+     */
     @Override
     public void updateUserRole(int userId, String role) {
         try {
@@ -446,6 +557,12 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Update {@link User} "state" field by "userId".
+     *
+     * @param email - {@link User} email
+     * @param state - new {@link User} state
+     */
     @Override
     public void updateUserState(String email, String state) {
         try {
@@ -468,7 +585,63 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
         }
     }
 
+    /**
+     * Method return {@link Optional#of(Object)}{@link User} object where "userId" more than other "userIds" or if
+     * DB is empty then return {@link Optional#empty()}.
+     *
+     * @return {@link Optional#of(Object)} or {@link Optional#empty()}
+     */
+    @Override
+    public Optional<User> getLastCreatedUser() {
+        ResultSet resultSet = null;
+        try (Connection connection = getConnection();
+             PreparedStatement statement = connection.prepareStatement(ConstantMySqlRequest.GET_LAST_USER_OBJECT)) {
+            resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                return Optional.of(extractUser(resultSet));
+            }
+        } catch (SQLException e) {
+            LOGGER.error("Could not get last media object" + e);
+        } finally {
+            close(resultSet);
+        }
+        return Optional.empty();
+    }
 
+    /**
+     * Delete {@link User} object from DB by "user email".
+     *
+     * @param userEmail - {@link User} email
+     */
+    @Override
+    public void deleteUserByUserEmail(String userEmail) {
+        try {
+            connection = getConnection();
+            connection.setAutoCommit(false);
+            statement = connection.prepareStatement(ConstantMySqlRequest.DELETE_USER_BY_EMAIL);
+            statement.setString(1, userEmail);
+            statement.execute();
+            connection.commit();
+            LOGGER.trace("DELETE user " + userEmail + " is success.");
+        } catch (SQLException e) {
+            rollback(connection);
+            LOGGER.error("Problem with DELETING user: " + userEmail);
+            throw new DaoException("Cannot DELETE user" + userEmail, e);
+        } finally {
+            close(connection);
+            close(statement);
+        }
+    }
+
+    /**
+     * Method extract Media parameters from DB and generated new {@link User} object for work with this object in
+     * java and view layers.
+     * Important for project.
+     *
+     * @param resultSet - {@link ResultSet}
+     * @return generated {@link User} object. This object is generation by {@link UserBuilder}
+     * @throws SQLException - {@link SQLException}
+     */
     private User extractUser(ResultSet resultSet) throws SQLException {
         UserBuilder userBuilder = new UserBuilder();
 
@@ -492,5 +665,4 @@ public class UserDaoMySql extends ConnectionManager implements IUserDao {
 
         return userBuilder.build();
     }
-
 }

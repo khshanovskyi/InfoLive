@@ -65,14 +65,14 @@
             </div>
             <div id="cvv-and-period">
                 <div id="date-activity-cart">
-                    <input type="number" id="year" placeholder="YYYY" pattern="[0-9]{4}" required name="year"  min="2020" max="2030">
+                    <label for="year"></label><input type="number" id="year" placeholder="YYYY" pattern="[0-9]{4}" required name="year" min="2020" max="2030">
                     <b id="slash">/</b>
-                    <input type="number" id="month" placeholder="MM" pattern="[0-9]{1,2}" required name="month" min="01" max="12">
+                    <label for="month"></label><input type="number" id="month" placeholder="MM" pattern="[0-9]{1,2}" required name="month" min="01" max="12">
                     <small><fmt:message key="Please.enter.a.year"/> (YYYY) <fmt:message key="and.month"/> (MM)
                         <fmt:message key="card.activity"/>. <fmt:message key="This.information.is.placed"/>.</small>
                 </div>
                 <div id="cvv">
-                    <input type="text" id="cvv-code" pattern="[0-9]{3,4}" min="3" max="4" required placeholder="CVV" name="CVV-code">
+                    <label for="cvv-code"></label><input type="text" id="cvv-code" pattern="[0-9]{3,4}" min="3" max="4" required placeholder="CVV" name="CVV-code">
                     <small><fmt:message key="Enter.the.CVV.code"/></small>
                 </div>
             </div>
@@ -94,7 +94,7 @@
         </div>
         <div class="forLocaleBtn">
             <form action="locale">
-                <button name="localeBtnRU" id="localeBtnRU" title="Русский" type="submit" }>RU</button>
+                <button name="localeBtnRU" id="localeBtnRU" title="Русский" type="submit">RU</button>
                 <input type="hidden" name="URLFromRequest" value="/payment-service">
             </form>
         </div>

@@ -1,6 +1,5 @@
 package ua.nure.khshanovskyi.infoLife.controller.subscription;
 
-import org.apache.log4j.Logger;
 import ua.nure.khshanovskyi.infoLife.entity.constant.Constant;
 import ua.nure.khshanovskyi.infoLife.entity.dto.ShortSubscriptionJoinDTO;
 import ua.nure.khshanovskyi.infoLife.entity.user.User;
@@ -17,8 +16,6 @@ import java.util.List;
 @WebServlet("/my-subscriptions")
 public class MySubscriptionsController extends HttpServlet {
 
-    private static final Logger LOGGER = Logger.getLogger(MySubscriptionsController.class);
-
     private ISubscriptionService subscriptionService;
 
     @Override
@@ -28,9 +25,11 @@ public class MySubscriptionsController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        User user = (User) req.getSession().getAttribute(String.valueOf(Constant.USER_IS_UNBLOCKED));
-        List<ShortSubscriptionJoinDTO> subscriptionsList = subscriptionService.getActivityUserSubscriptions(user.getUserId());
-        req.setAttribute("subscriptionsList",subscriptionsList);
-        req.getRequestDispatcher("WEB-INF/jsp/my_subscription.jsp").forward(req,resp);
+        if (req.getSession().getAttribute(String.valueOf(Constant.USER_IS_UNBLOCKED)) != null ){
+            User user = (User) req.getSession().getAttribute(String.valueOf(Constant.USER_IS_UNBLOCKED));
+            List<ShortSubscriptionJoinDTO> subscriptionsList = subscriptionService.getActivityUserSubscriptions(user.getUserId());
+            req.setAttribute("subscriptionsList",subscriptionsList);
+            req.getRequestDispatcher("WEB-INF/jsp/my_subscription.jsp").forward(req,resp);
+        }
     }
 }

@@ -1,7 +1,5 @@
-ua\nure\khshanovskyi\infoLife\tag\CaptchaTag.class
 ua\nure\khshanovskyi\infoLife\dao\media\impl\MediaDaoMySql.class
 ua\nure\khshanovskyi\infoLife\filter\FilterFromUserWithoutAuthorization.class
-ua\nure\khshanovskyi\infoLife\validation\CheckEmail.class
 ua\nure\khshanovskyi\infoLife\entity\dto\SubscriptionDTO.class
 ua\nure\khshanovskyi\infoLife\service\topLewel\subscribe\ISubscriptionService.class
 ua\nure\khshanovskyi\infoLife\entity\constant\Constant.class

@@ -34,7 +34,7 @@
 <%--main--%>
 <main>
     <div id="picture-block">
-        <img id="media-logo-img" src="logo_imgs/<c:out value="${MediaObj.uriLogoImg}"/>">
+        <img id="media-logo-img" src="logo_imgs/<c:out value="${MediaObj.uriLogoImg}"/>" alt="logo">
     </div>
     <div id="subscription-and-info">
         <div id="with-name">
@@ -49,7 +49,7 @@
         <div id="read" class="for-margin">
             <div id="with-href-to-pdf-in-img">
                 <a href="reader?read-online=<c:out value="${MediaObj.pdfUri}"/>" target="popup"><img id="user-read"
-                                                                                                     src="icon/study.png"></a>
+                                                                                                     src="icon/study.png" alt="read"></a>
             </div>
             <div id="with-href-to-pdf">
                 <a href="reader?read-online=<c:out value="${MediaObj.pdfUri}"/>" target="popup"><h4><b><fmt:message

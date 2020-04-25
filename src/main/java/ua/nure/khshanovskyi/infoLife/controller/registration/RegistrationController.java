@@ -1,6 +1,8 @@
 package ua.nure.khshanovskyi.infoLife.controller.registration;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import ua.nure.khshanovskyi.infoLife.entity.constant.Constant;
 import ua.nure.khshanovskyi.infoLife.entity.user.User;
 import ua.nure.khshanovskyi.infoLife.service.lowerLevel.user.creator.UserCreator;
@@ -15,7 +17,7 @@ import java.util.Optional;
 @WebServlet("/registration-controller")
 public class RegistrationController extends HttpServlet {
 
-    private static final Logger LOGGER = Logger.getLogger(RegistrationController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(RegistrationController.class);
 
     private IUserService userService;
 

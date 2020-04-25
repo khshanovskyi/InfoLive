@@ -1,6 +1,8 @@
 package ua.nure.khshanovskyi.infoLife.controller.menu.main;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import ua.nure.khshanovskyi.infoLife.service.topLewel.media.IMediaService;
 
 import javax.servlet.ServletException;
@@ -15,7 +17,7 @@ import java.util.List;
 @WebServlet("/media")
 public class MediaController extends HttpServlet {
 
-    private static final Logger LOGGER = Logger.getLogger(MediaController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(MediaController.class);
     private static final String HREF_TO_JSP = "WEB-INF/jsp/media.jsp";
 
     private IMediaService mediaService;

@@ -1,5 +1,10 @@
 package ua.nure.khshanovskyi.infoLife.entity.dto;
 
+/**
+ * DTO(data transfer object) for get JOIN from DB and after use it in java and view layer.
+ *
+ * @author Khshanovskyi Pavlo
+ */
 public class SubscriptionDTO {
 
     private int mediaId;

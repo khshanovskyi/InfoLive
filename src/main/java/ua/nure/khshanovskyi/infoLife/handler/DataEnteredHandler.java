@@ -1,13 +1,24 @@
 package ua.nure.khshanovskyi.infoLife.handler;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import ua.nure.khshanovskyi.infoLife.entity.user.User;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * This class for validation information before creating new {@link User} entity.
+ *
+ * @author Khshanovskyi Pavlo
+ */
 public class DataEnteredHandler {
 
-    private static final Logger LOGGER = Logger.getLogger(DataEnteredHandler.class);
+    /**
+     * {@link Logger} log4j for logs.
+     */
+    private static final Logger LOGGER = LoggerFactory.getLogger(DataEnteredHandler.class);
 
     private static Pattern checkEmail = Pattern.compile("^[\\w!#$%&’*+/=?`{|}~^-]+(?:\\.[\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$");
     private static Pattern checkName = Pattern.compile("[A-Za-zА-Яа-яёЁЇїІіЄєҐґ]{2,15}");
@@ -18,6 +29,12 @@ public class DataEnteredHandler {
     private static Pattern checkPostCode = Pattern.compile("[0-9]{4,6}");
     private static Pattern checkPassword = Pattern.compile("[A-Za-z0-9]{8,21}");
 
+    /**
+     * Method for email validation.
+     *
+     * @param email - email
+     * @return true or false
+     */
     public boolean emailValidation(String email) {
         if (email != null) {
             Matcher matcher = checkEmail.matcher(email);
@@ -32,6 +49,12 @@ public class DataEnteredHandler {
         return false;
     }
 
+    /**
+     * Method for surname, name and patronymic validation.
+     *
+     * @param name - surname, name or patronymic
+     * @return true or false
+     */
     public boolean nameValidation(String name) {
         if (name != null) {
             Matcher matcher = checkName.matcher(name);
@@ -46,6 +69,12 @@ public class DataEnteredHandler {
         return false;
     }
 
+    /**
+     * Method for phoneNumber validation.
+     *
+     * @param phoneNumber - phone number
+     * @return true or false
+     */
     public boolean phoneNumberValidation(String phoneNumber) {
         if (phoneNumber != null) {
             Matcher matcher = checkPhoneNumber.matcher(phoneNumber);
@@ -61,6 +90,12 @@ public class DataEnteredHandler {
         return false;
     }
 
+    /**
+     * Method for address validation.
+     *
+     * @param address - address (region, district, locality, street)
+     * @return true or false
+     */
     public boolean addressValidation(String address) {
         if (address != null) {
             Matcher matcher = checkAddress.matcher(address);
@@ -76,6 +111,12 @@ public class DataEnteredHandler {
         return false;
     }
 
+    /**
+     * Method for house validation.
+     *
+     * @param house - house
+     * @return true or false
+     */
     public boolean houseValidation(String house) {
         if (house != null) {
             Matcher matcher = checkHouse.matcher(house);
@@ -91,6 +132,12 @@ public class DataEnteredHandler {
         return false;
     }
 
+    /**
+     * Method for flat validation.
+     *
+     * @param flat - flat
+     * @return true or false
+     */
     public boolean flatValidation(String flat) {
         Matcher matcher = checkFlat.matcher(flat);
         if (matcher.matches()) {
@@ -102,6 +149,12 @@ public class DataEnteredHandler {
         }
     }
 
+    /**
+     * Method for postcode validation.
+     *
+     * @param postcode - postcode
+     * @return true or false
+     */
     public boolean postcodeValidation(String postcode) {
         if (postcode != null) {
             Matcher matcher = checkPostCode.matcher(postcode);
@@ -117,6 +170,12 @@ public class DataEnteredHandler {
         return false;
     }
 
+    /**
+     * Method for password validation.
+     *
+     * @param password - password
+     * @return true or false
+     */
     public boolean passwordValidation(String password) {
         if (password != null) {
             Matcher matcher = checkPassword.matcher(password);
@@ -132,6 +191,13 @@ public class DataEnteredHandler {
         return false;
     }
 
+    /**
+     * Method for password confirm validation.
+     *
+     * @param password        - password
+     * @param passwordConfirm - password confirm
+     * @return true or false
+     */
     public boolean passwordConfirmValidation(String password, String passwordConfirm) {
         if (password != null && passwordConfirm != null) {
             return password.equals(passwordConfirm);

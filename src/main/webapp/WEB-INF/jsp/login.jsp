@@ -31,7 +31,7 @@
     <div class="navbarMenu">
         <div class="leftPartNavbar">
             <div class="brandNameField">
-                <a class="navbar-brand" href="/InfoLive.ua/media" title="<fmt:message key="home.page"/>">
+                <a class="navbar-brand" href="<c:out value="${pageContext.request.contextPath}"/>/media" title="<fmt:message key="home.page"/>">
                     <strong id="infoLifeLabel">INFOLIVE</strong></a>
             </div>
             <div class="LookingForMenu">
@@ -46,9 +46,9 @@
         </div>
         <div class="rightPartNavbar">
             <div id="userLogin">
-                <a class="userLoginBtn" href="/InfoLive.ua/registration"
+                <a class="userLoginBtn" href="<c:out value="${pageContext.request.contextPath}"/>/registration"
                    title="<fmt:message key="title.registration"/>">
-                    <img class="userLoginImg" src="icon/add-user-button.png"></a>
+                    <img class="userLoginImg" src="icon/add-user-button.png" alt="user"></a>
             </div>
         </div>
     </div>
@@ -88,8 +88,8 @@
                 <button id="loginBtn" name="SUBMIT_LOGIN" type="submit" title="<fmt:message key="login.submit"/>">
                     <fmt:message key="login.submit"/></button>
             </form>
-            <a href="#"><fmt:message key="i.forgot.my.password"/></a>
-            <a href="/InfoLive.ua/registration"><fmt:message key="ref.to.registration"/></a>
+<%--            <a href="#"><fmt:message key="i.forgot.my.password"/></a>--%>
+            <a href="<c:out value="${pageContext.request.contextPath}"/>/registration"><fmt:message key="ref.to.registration"/></a>
         </div>
     </c:if>
     <c:if test="${INVALID == null}">
@@ -115,8 +115,8 @@
                 <button id="loginBtn" name="SUBMIT_LOGIN" type="submit" title="<fmt:message key="login.submit"/>">
                     <fmt:message key="login.submit"/></button>
             </form>
-            <a href="#"><fmt:message key="i.forgot.my.password"/></a>
-            <a href="/InfoLive.ua/registration"><fmt:message key="ref.to.registration"/></a>
+<%--            <a href="#"><fmt:message key="i.forgot.my.password"/></a>--%>
+            <a href="<c:out value="${pageContext.request.contextPath}"/>/registration"><fmt:message key="ref.to.registration"/></a>
         </div>
     </c:if>
 
@@ -131,7 +131,7 @@
         </div>
         <div class="forLocaleBtn">
             <form action="locale">
-                <button name="localeBtnRU" id="localeBtnRU" title="Русский" type="submit" }>RU</button>
+                <button name="localeBtnRU" id="localeBtnRU" title="Русский" type="submit">RU</button>
                 <input type="hidden" name="URLFromRequest" value="/login">
             </form>
         </div>

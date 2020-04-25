@@ -140,7 +140,7 @@
                 <div class="icon">
                     <div class="logo-img">
                             <a href="details?info-about-media=${media.mediaId}"  title="<fmt:message key="tap.for.details"/>">
-                                <img class="media-logo-img" src="logo_imgs/<c:out value="${media.uriLogoImg}"/>">
+                                <img class="media-logo-img" src="logo_imgs/<c:out value="${media.uriLogoImg}"/>" alt="logo">
                             </a>
                     </div>
                     <div class="short-description">
@@ -161,7 +161,7 @@
                     <div class="icon">
                         <div class="logo-img">
                             <a href="details?info-about-media=${media.mediaId}"  title="<fmt:message key="tap.for.details"/>">
-                                <img class="media-logo-img" src="logo_imgs/<c:out value="${media.uriLogoImg}"/>">
+                                <img class="media-logo-img" src="logo_imgs/<c:out value="${media.uriLogoImg}"/>" alt="logo">
                             </a>
                         </div>
                         <div class="short-description">

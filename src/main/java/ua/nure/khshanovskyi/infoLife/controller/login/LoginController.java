@@ -1,7 +1,7 @@
 package ua.nure.khshanovskyi.infoLife.controller.login;
 
-
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ua.nure.khshanovskyi.infoLife.entity.constant.Constant;
 
 import javax.servlet.ServletException;
@@ -15,7 +15,7 @@ import java.io.IOException;
 @WebServlet("/login")
 public class LoginController extends HttpServlet {
 
-    private static final Logger LOGGER = Logger.getLogger(LoginController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
 
     @Override
     public void init(){ }
@@ -34,7 +34,7 @@ public class LoginController extends HttpServlet {
             }
 
         }catch (ServletException | IOException e){
-            LOGGER.error(e);
+            LOGGER.error(String.valueOf(e));
         }
     }
 }

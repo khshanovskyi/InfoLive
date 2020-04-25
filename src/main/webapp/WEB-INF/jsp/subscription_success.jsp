@@ -43,7 +43,7 @@
             <b><fmt:message key="Before.you.close.the.window"/>.
                 <fmt:message key="Please.note.that.incorrect"/>!</b>
         </h5>
-        <h4><fmt:message key="Please.check.your.details"/> <a href="/InfoLive.ua/distributor"><fmt:message key="personal.office"/></a> <fmt:message key="to.update.the.data"/>!</h4>
+        <h4><fmt:message key="Please.check.your.details"/> <a href="<c:out value="${pageContext.request.contextPath}"/>/distributor"><fmt:message key="personal.office"/></a> <fmt:message key="to.update.the.data"/>!</h4>
     </div>
     <div id="personal-user-info">
         <div id="name-of-topic">
@@ -83,7 +83,7 @@
         </div>
         <div class="forLocaleBtn">
             <form action="locale">
-                <button name="localeBtnRU" id="localeBtnRU" title="Русский" type="submit" }>RU</button>
+                <button name="localeBtnRU" id="localeBtnRU" title="Русский" type="submit">RU</button>
                 <input type="hidden" name="URLFromRequest" value="/subscription-success">
             </form>
         </div>

@@ -2,6 +2,11 @@ package ua.nure.khshanovskyi.infoLife.entity.dto;
 
 import java.sql.Date;
 
+/**
+ * DTO(data transfer object) for get JOIN from DB and after use it in java and view layer.
+ *
+ * @author Khshanovskyi Pavlo
+ */
 public class ShortSubscriptionJoinDTO {
 
     private int subscriptionId;

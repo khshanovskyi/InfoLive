@@ -1,7 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="InfoLive:war" />
+      <artifact name="InfoLive:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd0dfea-73bc-4b48-8e9e-1b5c1fb2569a" name="Default Changelist" comment="" />
+    <list default="true" id="2fd0dfea-73bc-4b48-8e9e-1b5c1fb2569a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a42f8631-bf8e-4eb2-8cb6-ac3d44d7039a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a42f8631-bf8e-4eb2-8cb6-ac3d44d7039a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/locale/LocaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/locale/LocaleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/login/AuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/login/AuthorizationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/logout/LogoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/logout/LogoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/main/DetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/main/DetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/main/MediaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/main/MediaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/reader/ReaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/reader/ReaderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/role/Distributor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/role/Distributor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/role/admin/AdminInterfaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/role/admin/AdminInterfaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/role/admin/CreateNewMediaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/role/admin/CreateNewMediaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/role/admin/DeleteMediaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/role/admin/DeleteMediaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/role/admin/UpdateMediaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/role/admin/UpdateMediaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/role/user/UserInterfaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/menu/role/user/UserInterfaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/payment/PaymentServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/payment/PaymentServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/registration/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/registration/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/registration/RegistrationPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/registration/RegistrationPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/subscription/MySubscriptionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/subscription/MySubscriptionsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/subscription/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/subscription/SubscriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/subscription/SubscriptionSuccessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/controller/subscription/SubscriptionSuccessController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/dao/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/dao/ConnectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/dao/ConstantMySqlRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/dao/ConstantMySqlRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/dao/media/IMediaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/dao/media/IMediaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/dao/media/impl/MediaDaoMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/dao/media/impl/MediaDaoMySql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/dao/subscribe/ISubscriptionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/dao/subscribe/ISubscriptionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/dao/subscribe/impl/SubscriptionDaoMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/dao/subscribe/impl/SubscriptionDaoMySql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/dao/user/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/dao/user/IUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/dao/user/impl/UserDaoMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/dao/user/impl/UserDaoMySql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/constant/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/constant/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/dto/ShortSubscriptionJoinDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/dto/ShortSubscriptionJoinDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/dto/SubscriptionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/dto/SubscriptionDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/dto/SubscriptionJoinUserAndMediaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/dto/SubscriptionJoinUserAndMediaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/media/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/media/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/media/builder/MediaBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/media/builder/MediaBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/subscription/builder/SubscriptionBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/subscription/builder/SubscriptionBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/user/builder/UserBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/entity/user/builder/UserBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/exception/DaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/exception/DaoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/filter/AuthorizationSessionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/filter/AuthorizationSessionFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/filter/CharacterSetFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/filter/CharacterSetFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/filter/FilterBlockUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/filter/FilterBlockUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/filter/FilterForGuestsToBLOCKEDPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/filter/FilterForGuestsToBLOCKEDPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/filter/FilterForUserInLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/filter/FilterForUserInLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/filter/FilterFromUserWithoutAuthorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/filter/FilterFromUserWithoutAuthorization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/filter/LoginInvalidFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/filter/LoginInvalidFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/filter/SubscriptionDTOFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/filter/SubscriptionDTOFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/handler/DataEnteredHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/handler/DataEnteredHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/listener/InitializationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/listener/InitializationListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/service/lowerLevel/user/creator/UserCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/service/lowerLevel/user/creator/UserCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/service/topLewel/media/impl/MediaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/service/topLewel/media/impl/MediaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/service/topLewel/user/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/service/topLewel/user/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/tag/CaptchaTag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/nure/khshanovskyi/infoLife/validation/CheckEmail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log_file.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log_file.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin_interface.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin_interface.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/blocked_user_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/blocked_user_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/details.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/media.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/media.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/my_subscription.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/my_subscription.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/payment_service.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/payment_service.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/reader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/reader.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/subscription_success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/subscription_success.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user_interface.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user_interface.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/footer.tag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/footer.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/nav_bar_media_details.tag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/nav_bar_media_details.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar_for_admin_and_user.tag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar_for_admin_and_user.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tlds/tag.tld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log_file.log" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log_file.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/locale/LocaleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/locale/LocaleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/login/AuthorizationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/login/AuthorizationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/login/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/login/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/logout/LogoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/logout/LogoutController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/main/DetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/main/DetailsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/main/MediaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/main/MediaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/reader/ReaderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/reader/ReaderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/role/Distributor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/role/Distributor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/role/admin/AdminInterfaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/role/admin/AdminInterfaceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/role/admin/CreateNewMediaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/role/admin/CreateNewMediaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/role/admin/DeleteMediaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/role/admin/DeleteMediaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/role/admin/UpdateMediaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/role/admin/UpdateMediaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/role/user/UserInterfaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/menu/role/user/UserInterfaceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/payment/PaymentServiceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/payment/PaymentServiceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/registration/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/registration/RegistrationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/registration/RegistrationPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/registration/RegistrationPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/subscription/MySubscriptionsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/subscription/MySubscriptionsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/subscription/SubscriptionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/subscription/SubscriptionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/subscription/SubscriptionSuccessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/controller/subscription/SubscriptionSuccessController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/dao/ConnectionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/dao/ConnectionManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/dao/ConstantMySqlRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/dao/ConstantMySqlRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/dao/media/IMediaDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/dao/media/IMediaDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/dao/media/impl/MediaDaoMySql.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/dao/media/impl/MediaDaoMySql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/dao/subscribe/ISubscriptionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/dao/subscribe/ISubscriptionDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/dao/subscribe/impl/SubscriptionDaoMySql.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/dao/subscribe/impl/SubscriptionDaoMySql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/dao/user/IUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/dao/user/IUserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/dao/user/impl/UserDaoMySql.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/dao/user/impl/UserDaoMySql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/constant/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/constant/Constant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/dto/ShortSubscriptionJoinDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/dto/ShortSubscriptionJoinDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/dto/SubscriptionDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/dto/SubscriptionDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/dto/SubscriptionJoinUserAndMediaDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/dto/SubscriptionJoinUserAndMediaDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/media/Media.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/media/Media.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/media/builder/MediaBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/media/builder/MediaBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/subscription/builder/SubscriptionBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/subscription/builder/SubscriptionBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/user/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/user/builder/UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/entity/user/builder/UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/exception/DaoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/exception/DaoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/filter/AuthorizationSessionFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/filter/AuthorizationSessionFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/filter/CharacterSetFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/filter/CharacterSetFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/filter/FilterBlockUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/filter/FilterBlockUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/filter/FilterForGuestsToBLOCKEDPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/filter/FilterForGuestsToBLOCKEDPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/filter/FilterForUserInLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/filter/FilterForUserInLogin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/filter/FilterFromUserWithoutAuthorization.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/filter/FilterFromUserWithoutAuthorization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/filter/LoginInvalidFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/filter/LoginInvalidFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/filter/SubscriptionDTOFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/filter/SubscriptionDTOFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/handler/DataEnteredHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/handler/DataEnteredHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/listener/InitializationListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/listener/InitializationListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/service/lowerLevel/user/creator/UserCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/service/lowerLevel/user/creator/UserCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/service/topLewel/media/impl/MediaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/service/topLewel/media/impl/MediaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/service/topLewel/user/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/service/topLewel/user/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/tag/CaptchaTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/nure/khshanovskyi/infoLife/validation/CheckEmail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2020-04-21" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,50 +183,65 @@
         <option value="Interface" />
         <option value="Jsp File" />
         <option value="CSS File" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/media.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectId" id="1Z2ALSNTdJPK08CmUugT0yhkRhd" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/test/ua/nure/khshanovskyi/infoLife/service/topLewel" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/test/ua/nure/khshanovskyi/infoLife" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../mysql-connector-java-5.1.48-bin.jar!/" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.46349207" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="ua.nure.khshanovskyi.infoLife.service.topLewel.media.impl" />
-      <recent name="ua.nure.khshanovskyi.infoLife.service.topLewel.subscribe.impl" />
-      <recent name="ua.nure.khshanovskyi.infoLife.service.topLewel.user.impl" />
       <recent name="ua.nure.khshanovskyi.infoLife.handler" />
-      <recent name="ua.nure.khshanovskyi.infoLife.service.lowerLevel.user.creator" />
+      <recent name="ua.nure.khshanovskyi.infoLife.dao.subscribe.impl" />
+      <recent name="ua.nure.khshanovskyi.infoLife.dao.media.impl" />
+      <recent name="ua.nure.khshanovskyi.infoLife.dao.user.impl" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\InfoLive\src\main\webapp\WEB-INF\classes" />
       <recent name="E:\InfoLive\src\main\resources" />
       <recent name="E:\InfoLive\src\main\webapp\WEB-INF" />
       <recent name="E:\InfoLive\src\main\webapp" />
@@ -121,6 +275,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MediaDaoMySqlTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InfoLive" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.nure.khshanovskyi.infoLife.dao.media.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ua.nure.khshanovskyi.infoLife.dao.media.impl" />
+      <option name="MAIN_CLASS_NAME" value="ua.nure.khshanovskyi.infoLife.dao.media.impl.MediaDaoMySqlTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MediaServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InfoLive" />
       <extension name="coverage">
@@ -136,46 +305,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubscriptionServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SubscriptionDaoMySqlTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InfoLive" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ua.nure.khshanovskyi.infoLife.service.topLewel.subscribe.impl.*" />
+          <option name="PATTERN" value="ua.nure.khshanovskyi.infoLife.dao.subscribe.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ua.nure.khshanovskyi.infoLife.service.topLewel.subscribe.impl" />
-      <option name="MAIN_CLASS_NAME" value="ua.nure.khshanovskyi.infoLife.service.topLewel.subscribe.impl.SubscriptionServiceTest" />
+      <option name="PACKAGE_NAME" value="ua.nure.khshanovskyi.infoLife.dao.subscribe.impl" />
+      <option name="MAIN_CLASS_NAME" value="ua.nure.khshanovskyi.infoLife.dao.subscribe.impl.SubscriptionDaoMySqlTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCreatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserDaoMySqlTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InfoLive" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ua.nure.khshanovskyi.infoLife.service.lowerLevel.user.creator.*" />
+          <option name="PATTERN" value="ua.nure.khshanovskyi.infoLife.dao.user.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ua.nure.khshanovskyi.infoLife.service.lowerLevel.user.creator" />
-      <option name="MAIN_CLASS_NAME" value="ua.nure.khshanovskyi.infoLife.service.lowerLevel.user.creator.UserCreatorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="InfoLive" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ua.nure.khshanovskyi.infoLife.service.topLewel.user.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ua.nure.khshanovskyi.infoLife.service.topLewel.user.impl" />
-      <option name="MAIN_CLASS_NAME" value="ua.nure.khshanovskyi.infoLife.service.topLewel.user.impl.UserServiceImplTest" />
+      <option name="PACKAGE_NAME" value="ua.nure.khshanovskyi.infoLife.dao.user.impl" />
+      <option name="MAIN_CLASS_NAME" value="ua.nure.khshanovskyi.infoLife.dao.user.impl.UserDaoMySqlTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -208,12 +362,96 @@
         <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="clean" />
       </method>
     </configuration>
+    <configuration name="Tomcat 9.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.27" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8880/InfoLive_war/" />
+      <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="InfoLive:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/InfoLive_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_InfoLive_2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52581" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="InfoLive:war" />
+          <artifact name="InfoLive:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.DataEnteredHandlerTest" />
+      <item itemvalue="JUnit.MediaDaoMySqlTest" />
+      <item itemvalue="JUnit.SubscriptionDaoMySqlTest" />
+      <item itemvalue="JUnit.UserDaoMySqlTest" />
+      <item itemvalue="JUnit.MediaServiceTest" />
+      <item itemvalue="Maven.Tom" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.27" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserServiceImplTest" />
-        <item itemvalue="JUnit.UserCreatorTest" />
-        <item itemvalue="JUnit.SubscriptionServiceTest" />
         <item itemvalue="JUnit.MediaServiceTest" />
+        <item itemvalue="JUnit.SubscriptionDaoMySqlTest" />
+        <item itemvalue="JUnit.MediaDaoMySqlTest" />
+        <item itemvalue="JUnit.UserDaoMySqlTest" />
         <item itemvalue="JUnit.DataEnteredHandlerTest" />
       </list>
     </recent_temporary>
@@ -222,12 +460,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1a3c72e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -249,11 +482,27 @@
       <workItem from="1585722085191" duration="40292000" />
       <workItem from="1586596492086" duration="8283000" />
       <workItem from="1586681985744" duration="10993000" />
-      <workItem from="1586876843217" duration="7695000" />
+      <workItem from="1586876843217" duration="11497000" />
+      <workItem from="1587554444314" duration="87108000" />
+      <workItem from="1587794240977" duration="17756000" />
+      <workItem from="1587817256759" duration="2161000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

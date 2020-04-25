@@ -1,19 +1,33 @@
 package ua.nure.khshanovskyi.infoLife.filter;
 
-import org.apache.log4j.Logger;
 import ua.nure.khshanovskyi.infoLife.entity.constant.Constant;
 
-import javax.servlet.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = {"/media", "/login", "/registration", "/reader", "/subscription-success", "/user-interface", "/payment-service", "/my-subscriptions"})
+/**
+ * This filter redirect users which have the {@link Constant#BLOCKED} status in {@link HttpSession#getAttribute(String)}
+ * from pages listed bellow to "/BLOCKED" page.
+ *
+ * @author Khshanovskyi Pavlo
+ */
+@WebFilter(urlPatterns = {"/media", "/login", "/registration", "/reader", "/subscription-success", "/user-interface",
+        "/payment-service", "/my-subscriptions", "/admin-interface"})
 public class FilterBlockUser implements Filter {
 
-    private static final Logger LOGGER = Logger.getLogger(FilterBlockUser.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(FilterBlockUser.class);
 
     @Override
     public void init(FilterConfig filterConfig) {

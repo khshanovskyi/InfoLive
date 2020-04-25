@@ -5,7 +5,7 @@
     <div class="navbarMenu">
         <div class="leftPartNavbar">
             <div class="brandNameField">
-                <a class="navbar-brand" href="/InfoLive.ua/media" title="<fmt:message key="home.page"/>">
+                <a class="navbar-brand" href="<c:out value="${pageContext.request.contextPath}"/>/media" title="<fmt:message key="home.page"/>">
                     <strong id="infoLifeLabel">INFOLIVE</strong></a>
             </div>
             <div class="LookingForMenu">
@@ -28,17 +28,17 @@
                     <c:when test="${USER_IS_UNBLOCKED != null}">
                         <jsp:useBean id="USER_IS_UNBLOCKED" scope="session" type="ua.nure.khshanovskyi.infoLife.entity.user.User"/>
                         <c:if test="${USER_IS_UNBLOCKED.role.equals('USER')}">
-                            <a class="userLoginBtn" href="/InfoLive.ua/distributor" title="<fmt:message key="user.setting"/>">
-                                <img class="userLoginImg"src="icon/user.png"></a>
+                            <a class="userLoginBtn" href="<c:out value="${pageContext.request.contextPath}"/>/distributor" title="<fmt:message key="user.setting"/>">
+                                <img class="userLoginImg" src="icon/user.png" alt="login"></a>
                         </c:if>
                         <c:if test="${USER_IS_UNBLOCKED.role.equals('ADMIN')}">
-                            <a class="userLoginBtn" href="/InfoLive.ua/distributor" title="<fmt:message key="user.setting"/>">
-                                <img class="userLoginImg"src="icon/admin.png"></a>
+                            <a class="userLoginBtn" href="<c:out value="${pageContext.request.contextPath}"/>/distributor" title="<fmt:message key="user.setting"/>">
+                                <img class="userLoginImg" src="icon/admin.png" alt="login"></a>
                         </c:if>
                     </c:when>
                     <c:otherwise>
-                        <a class="userLoginBtn" href="/InfoLive.ua/login" title="<fmt:message key="Login"/>">
-                            <img class="userLoginImg"src="icon/login.png"></a>
+                        <a class="userLoginBtn" href="<c:out value="${pageContext.request.contextPath}"/>/login" title="<fmt:message key="Login"/>">
+                            <img class="userLoginImg" src="icon/login.png" alt="login"></a>
                     </c:otherwise>
                 </c:choose>
             </div>

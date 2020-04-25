@@ -5,6 +5,11 @@ import ua.nure.khshanovskyi.infoLife.entity.media.Media;
 import java.sql.Date;
 import java.sql.Time;
 
+/**
+ * Builder for {@link Media} entity.
+ *
+ * @author Khshanovskyi Pavlo
+ */
 public class MediaBuilder {
 
     private int mediaId;
@@ -19,8 +24,9 @@ public class MediaBuilder {
     private Date date;
     private Time time;
 
-    public void buildMediaId(int mediaId) {
+    public MediaBuilder buildMediaId(int mediaId) {
         this.mediaId = mediaId;
+        return this;
     }
 
     public MediaBuilder buildMediaName(String mediaName) {
@@ -73,6 +79,11 @@ public class MediaBuilder {
         return this;
     }
 
+    /**
+     * Method build {@link Media} object.
+     *
+     * @return new {@link Media} entity object
+     */
     public Media build(){
         Media media = new Media();
 

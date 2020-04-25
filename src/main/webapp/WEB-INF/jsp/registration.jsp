@@ -24,7 +24,7 @@
     <div class="navbarMenu">
         <div class="leftPartNavbar">
             <div class="brandNameField">
-                <a class="navbar-brand" href="/InfoLive.ua/media" title="<fmt:message key="home.page"/>">
+                <a class="navbar-brand" href="<c:out value="${pageContext.request.contextPath}"/>/media" title="<fmt:message key="home.page"/>">
                     <strong id="infoLifeLabel">INFOLIVE</strong></a>
             </div>
             <div class="LookingForMenu">
@@ -39,8 +39,8 @@
         </div>
         <div class="rightPartNavbar">
             <div id="userLogin">
-                <a class="userLoginBtn" href="/InfoLive.ua/media" title="<fmt:message key="Login"/>">
-                    <img class="userLoginImg"src="icon/login.png"></a>
+                <a class="userLoginBtn" href="<c:out value="${pageContext.request.contextPath}"/>/login" title="<fmt:message key="Login"/>">
+                    <img class="userLoginImg" src="icon/login.png" alt="login"></a>
             </div>
         </div>
     </div>
@@ -127,7 +127,7 @@
             </div>
             <button id="loginBtn" type="submit" title="Login"><fmt:message key="btn.submit"/></button>
         </form>
-        <a href="/InfoLive.ua/login"><fmt:message key="ref.to.login"/></a>
+        <a href="<c:out value="${pageContext.request.contextPath}"/>/login"><fmt:message key="ref.to.login"/></a>
     </div>
 </main>
 <footer>

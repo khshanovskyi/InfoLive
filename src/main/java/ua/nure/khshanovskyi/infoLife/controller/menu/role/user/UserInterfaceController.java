@@ -1,6 +1,8 @@
 package ua.nure.khshanovskyi.infoLife.controller.menu.role.user;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import ua.nure.khshanovskyi.infoLife.entity.constant.Constant;
 import ua.nure.khshanovskyi.infoLife.entity.user.User;
 import ua.nure.khshanovskyi.infoLife.handler.DataEnteredHandler;
@@ -14,7 +16,7 @@ import java.io.IOException;
 @WebServlet("/user-interface")
 public class UserInterfaceController extends HttpServlet {
 
-    private static final Logger LOGGER = Logger.getLogger(UserInterfaceController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserInterfaceController.class);
     private static final String DISTRIBUTOR = "/distributor";
 
     private IUserService userService;
@@ -178,7 +180,9 @@ public class UserInterfaceController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("WEB-INF/jsp/user_interface.jsp").forward(req, resp);
+        if (req.getSession().getAttribute(String.valueOf(Constant.USER_IS_UNBLOCKED)) != null ){
+            req.getRequestDispatcher("WEB-INF/jsp/user_interface.jsp").forward(req, resp);
+        }
     }
 
 }

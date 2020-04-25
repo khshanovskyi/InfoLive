@@ -14,13 +14,17 @@ import java.io.IOException;
 public class Distributor extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        User user = (User) req.getSession().getAttribute(String.valueOf(Constant.USER_IS_UNBLOCKED));
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        if (req.getSession().getAttribute(String.valueOf(Constant.USER_IS_UNBLOCKED)) != null ){
+            User user = (User) req.getSession().getAttribute(String.valueOf(Constant.USER_IS_UNBLOCKED));
 
-        if (user.getRole().equals(String.valueOf(Constant.USER))){
-            resp.sendRedirect(req.getContextPath() + "/user-interface");
-        }else if (user.getRole().equals(String.valueOf(Constant.ADMIN))){
-            resp.sendRedirect(req.getContextPath() + "/admin-interface");
+            if (user.getRole().equals(String.valueOf(Constant.USER))){
+                resp.sendRedirect(req.getContextPath() + "/user-interface");
+            }else if (user.getRole().equals(String.valueOf(Constant.ADMIN))){
+                resp.sendRedirect(req.getContextPath() + "/admin-interface");
+            }else {
+                resp.sendRedirect(req.getContextPath() + "/media");
+            }
         }else {
             resp.sendRedirect(req.getContextPath() + "/media");
         }

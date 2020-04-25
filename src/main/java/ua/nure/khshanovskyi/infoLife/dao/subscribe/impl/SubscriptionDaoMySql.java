@@ -1,33 +1,69 @@
 package ua.nure.khshanovskyi.infoLife.dao.subscribe.impl;
 
-import org.apache.log4j.Logger;
 import ua.nure.khshanovskyi.infoLife.dao.ConnectionManager;
 import ua.nure.khshanovskyi.infoLife.dao.ConstantMySqlRequest;
 import ua.nure.khshanovskyi.infoLife.dao.subscribe.ISubscriptionDao;
 import ua.nure.khshanovskyi.infoLife.entity.dto.ShortSubscriptionJoinDTO;
 import ua.nure.khshanovskyi.infoLife.entity.dto.SubscriptionJoinUserAndMediaDTO;
+import ua.nure.khshanovskyi.infoLife.entity.media.Media;
 import ua.nure.khshanovskyi.infoLife.entity.subscription.Subscription;
 import ua.nure.khshanovskyi.infoLife.entity.subscription.builder.SubscriptionBuilder;
+import ua.nure.khshanovskyi.infoLife.entity.user.User;
 import ua.nure.khshanovskyi.infoLife.exception.DaoException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.sql.DataSource;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Date;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Implementation of {@link ISubscriptionDao} interface for work with "subscription" table in MySQL DB.
+ *
+ * @author Khshanovskyi Pavlo
+ */
 public class SubscriptionDaoMySql extends ConnectionManager implements ISubscriptionDao {
 
-    private static final Logger LOGGER = Logger.getLogger(SubscriptionDaoMySql.class);
+    /**
+     * {@link Logger} log4j for logs.
+     */
+    private static final Logger LOGGER = LoggerFactory.getLogger(SubscriptionDaoMySql.class);
 
+    /**
+     * {@link Connection}
+     */
     private Connection connection = null;
+    /**
+     * {@link PreparedStatement}
+     */
     private PreparedStatement statement = null;
+    /**
+     * {@link List<Subscription>}
+     */
     private List<Subscription> subscriptionsList = new ArrayList<>();
 
+    /**
+     * Constructor for initialization this class and initialization {@link DataSource} for work with DB.
+     *
+     * @param dataSource {@link DataSource}
+     */
     public SubscriptionDaoMySql(DataSource dataSource) {
         super(dataSource);
     }
 
+
+    /**
+     * Method create new {@link Subscription} object in DB.
+     *
+     * @param subscription - {@link Subscription} object
+     */
     @Override
     public void create(Subscription subscription) {
         try {
@@ -51,6 +87,12 @@ public class SubscriptionDaoMySql extends ConnectionManager implements ISubscrip
         }
     }
 
+    /**
+     * Method return all activity {@link Subscription} of {@link User}.
+     *
+     * @param userId - id of {@link User}
+     * @return {@link List<Subscription>}
+     */
     @Override
     public List<Subscription> getUserSubscriptionsList(int userId) {
         clearList();
@@ -70,6 +112,12 @@ public class SubscriptionDaoMySql extends ConnectionManager implements ISubscrip
         return subscriptionsList;
     }
 
+    /**
+     * Method get last {@link User} {@link Subscription} object from DB.
+     *
+     * @param userId - id of {@link User}
+     * @return {@link Optional#of(Object)} {@link Subscription} or {@link Optional#empty()}
+     */
     @Override
     public Optional<Subscription> getLastUserSubscription(int userId) {
         ResultSet resultSet = null;
@@ -90,6 +138,12 @@ public class SubscriptionDaoMySql extends ConnectionManager implements ISubscrip
         return Optional.empty();
     }
 
+    /**
+     * Method get {@link SubscriptionJoinUserAndMediaDTO} object from DB.
+     *
+     * @param userId - id of {@link User}
+     * @return {@link Optional#of(Object)}{@link SubscriptionJoinUserAndMediaDTO} or {@link Optional#empty()}
+     */
     @Override
     public Optional<SubscriptionJoinUserAndMediaDTO> getFullInfoAboutSubscription(int userId) {
         ResultSet resultSet = null;
@@ -120,6 +174,14 @@ public class SubscriptionDaoMySql extends ConnectionManager implements ISubscrip
         return Optional.empty();
     }
 
+    /**
+     * Method get JOIN of {@link Subscription}, {@link Media} and {@link User} where field "date_to" more than cuurrent
+     * day.
+     *
+     * @param userId      - id of {@link User}
+     * @param currentDate - {@link Date}
+     * @return {@link List<ShortSubscriptionJoinDTO>}
+     */
     @Override
     public List<ShortSubscriptionJoinDTO> getAllActivityUserSubscription(int userId, Date currentDate) {
         List<ShortSubscriptionJoinDTO> dtoList = new ArrayList<>();
@@ -143,6 +205,36 @@ public class SubscriptionDaoMySql extends ConnectionManager implements ISubscrip
         return dtoList;
     }
 
+    /**
+     * For testing.
+     *
+     * @return {@link Optional<Subscription>} or {@link Optional#empty()}
+     */
+    @Override
+    public Optional<Subscription> getLastCreatedSubscription() {
+        ResultSet resultSet = null;
+        try (Connection connection = getConnection();
+             PreparedStatement statement = connection.prepareStatement(ConstantMySqlRequest.GET_LAST_CREATED_SUBSCRIPTION)) {
+            resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                return Optional.of(extractSubscription(resultSet));
+            }
+        } catch (SQLException e) {
+            LOGGER.error("Could not get last subscription object" + e);
+        } finally {
+            close(resultSet);
+        }
+        return Optional.empty();
+    }
+
+    /**
+     * Method extract Media parameters from DB and generated new {@link Subscription} object for work with this is
+     * object in java and view layers.
+     *
+     * @param resultSet - {@link ResultSet}
+     * @return generated {@link Subscription} object. This object is generation by {@link SubscriptionBuilder}
+     * @throws SQLException - {@link SQLException}
+     */
     private Subscription extractSubscription(ResultSet resultSet) throws SQLException {
         SubscriptionBuilder builder = new SubscriptionBuilder();
 
@@ -155,6 +247,9 @@ public class SubscriptionDaoMySql extends ConnectionManager implements ISubscrip
         return builder.build();
     }
 
+    /**
+     * Method for clear subscriptionsList if that not empty.
+     */
     private void clearList() {
         if (!subscriptionsList.isEmpty()) {
             subscriptionsList.clear();

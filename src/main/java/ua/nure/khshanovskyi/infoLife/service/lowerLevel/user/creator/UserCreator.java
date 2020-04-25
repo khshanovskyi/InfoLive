@@ -1,6 +1,8 @@
 package ua.nure.khshanovskyi.infoLife.service.lowerLevel.user.creator;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import ua.nure.khshanovskyi.infoLife.entity.user.User;
 import ua.nure.khshanovskyi.infoLife.entity.user.builder.UserBuilder;
 import ua.nure.khshanovskyi.infoLife.entity.constant.Constant;
@@ -18,7 +20,7 @@ public class UserCreator {
     /**
      * {@link Logger} log4j for logs.
      */
-    private static final Logger LOGGER = Logger.getLogger(UserCreator.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserCreator.class);
 
     /**
      * {@link DataEnteredHandler} object for validation entered information from {@link User}.

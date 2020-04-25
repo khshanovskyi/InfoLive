@@ -1,7 +1,9 @@
 package ua.nure.khshanovskyi.infoLife.dao;
 
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import ua.nure.khshanovskyi.infoLife.exception.DaoException;
 
 import javax.sql.DataSource;
@@ -10,10 +12,21 @@ import java.sql.SQLException;
 
 public class ConnectionManager {
 
-    private static final Logger LOGGER = Logger.getLogger(ConnectionManager.class);
+    /**
+     * {@link Logger} log4j for logs.
+     */
+    private static final Logger LOGGER = LoggerFactory.getLogger(ConnectionManager.class);
 
+    /**
+     * {@link DataSource}
+     */
     private DataSource dataSource;
 
+    /**
+     * Constructor for initialization this class and initialization {@link DataSource} for work with DB.
+     *
+     * @param dataSource {@link DataSource}
+     */
     public ConnectionManager(DataSource dataSource) {
         this.dataSource = dataSource;
     }

@@ -1,6 +1,5 @@
 package ua.nure.khshanovskyi.infoLife.controller.payment;
 
-import org.apache.log4j.Logger;
 import ua.nure.khshanovskyi.infoLife.entity.constant.Constant;
 import ua.nure.khshanovskyi.infoLife.entity.user.User;
 import ua.nure.khshanovskyi.infoLife.service.topLewel.user.IUserService;
@@ -16,8 +15,6 @@ import java.io.IOException;
 @WebServlet("/payment-service")
 public class PaymentServiceController extends HttpServlet {
 
-    private static final Logger LOGGER = Logger.getLogger(PaymentServiceController.class);
-
     private IUserService userService;
     private HttpSession session;
     private User user;
@@ -29,10 +26,11 @@ public class PaymentServiceController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        session = req.getSession();
-        user = (User) session.getAttribute(String.valueOf(Constant.USER_IS_UNBLOCKED));
-        req.getRequestDispatcher("WEB-INF/jsp/payment_service.jsp").forward(req, resp);
-        session.getAttribute(String.valueOf(Constant.SUBSCRIPTION_DTO));
+        if (req.getSession().getAttribute(String.valueOf(Constant.USER_IS_UNBLOCKED)) != null ){
+            session = req.getSession();
+            user = (User) session.getAttribute(String.valueOf(Constant.USER_IS_UNBLOCKED));
+            req.getRequestDispatcher("WEB-INF/jsp/payment_service.jsp").forward(req, resp);
+        }
     }
 
     @Override

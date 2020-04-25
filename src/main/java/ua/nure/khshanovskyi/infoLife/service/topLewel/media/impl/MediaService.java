@@ -1,6 +1,8 @@
 package ua.nure.khshanovskyi.infoLife.service.topLewel.media.impl;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import ua.nure.khshanovskyi.infoLife.dao.media.IMediaDao;
 import ua.nure.khshanovskyi.infoLife.dao.media.impl.MediaDaoMySql;
 import ua.nure.khshanovskyi.infoLife.entity.media.Media;
@@ -22,6 +24,7 @@ import java.util.Set;
 import java.util.Optional;
 
 /**
+ * This service is implementation of {@link IMediaService}.
  * This service work with DB and view interfaces and handle requests/response from DB and view interfaces.
  *
  * @author Khshanovskyi Pavlo
@@ -31,7 +34,7 @@ public class MediaService implements IMediaService {
     /**
      * {@link Logger} log4j for logs.
      */
-    private static final Logger LOGGER = Logger.getLogger(MediaService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(MediaService.class);
 
     /**
      * {@link IMediaDao} object for work with DB.
@@ -442,5 +445,4 @@ public class MediaService implements IMediaService {
             mediaList.clear();
         }
     }
-
 }

@@ -85,7 +85,7 @@
     </c:if>
     <c:if test="${empty subscriptionsList}">
        <h2 id="dont-have-activity-subscriptions"><c:out value="${USER_IS_UNBLOCKED.name}"/> <c:out value="${USER_IS_UNBLOCKED.patronymic}"/>,
-          <fmt:message key="you.do.not.have.an.active.subscription"/> <a href="/InfoLive.ua/media"><fmt:message key="homepage"/></a>
+          <fmt:message key="you.do.not.have.an.active.subscription"/> <a href="<c:out value="${pageContext.request.contextPath}"/>/media"><fmt:message key="homepage"/></a>
            <fmt:message key="and.select.the.edition"/>.</h2>
     </c:if>
 </main>
@@ -100,7 +100,7 @@
         </div>
         <div class="forLocaleBtn">
             <form action="locale">
-                <button name="localeBtnRU" id="localeBtnRU" title="Русский" type="submit" }>RU</button>
+                <button name="localeBtnRU" id="localeBtnRU" title="Русский" type="submit">RU</button>
                 <input type="hidden" name="URLFromRequest" value="/my-subscriptions">
             </form>
         </div>
